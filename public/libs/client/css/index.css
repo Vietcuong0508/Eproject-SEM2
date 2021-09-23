@@ -4878,7 +4878,8 @@ ul, ol {
 
 .product__pagination a, .blog__pagination a {
     display: inline-block;
-    width: 30px;
+    padding: 5px 5px;
+    width: auto;
     height: 30px;
     border: 1px solid #b2b2b2;
     font-size: 14px;

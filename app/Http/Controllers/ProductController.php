@@ -8,10 +8,17 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $list = Product::all();
-        return view('/client/products', ['list' => $list]);
+        $queryBuilder = Product::query();
+        $search = $request->query('search');
+        if ($search && strlen($search) > 0) {
+            $queryBuilder = $queryBuilder->where('shipName', 'like', '%' .$search. '%');
+        }
+        $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
+        return view('client/products', [
+            'list' => $events,
+        ]);
     }
 
     public function list(Request $request)

@@ -14,8 +14,10 @@ class Product extends Model
         'name',
         'thumbnail',
         'weight',
-        'gardenName',
         'price',
-        'category'
+        'category',
+        'gardenName',
+        'nutrient',
+        'vitamin',
     ];
 }

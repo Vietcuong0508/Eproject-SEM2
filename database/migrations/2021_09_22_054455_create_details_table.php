@@ -13,17 +13,9 @@ class CreateDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('order_details', function (Blueprint $table) {
-            $table->unsignedInteger('orderId'); // thuộc đơn hàng nào
-            $table->foreign('orderId')->references('id')->on('orders');
-            $table->unsignedInteger('productId');// mua cái gì
-            $table->foreign('productId')->references('id')->on('products');
-            $table->unsignedInteger('quantity'); //số lượng bao nhiêu
-            $table->double('unitPrice'); // giá một sản phẩm là bao nhiêu?
-            //trong một đơn hàng, sẽ không  có các sản phẩm với id trùng nhau
-            //mà chỉ thay đổi số lượng thôi
+        Schema::create('details', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->primary(['orderId', 'productId']);
         });
     }
 

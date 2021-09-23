@@ -66,7 +66,7 @@ class AdminController extends Controller
 
     public function login()
     {
-        return view('home.form-login');
+        return view('/client/login');
     }
 
     public function store(Request $request)
