@@ -46,6 +46,11 @@ Route::delete('/destroy-user/{id}', [AdminController::class, 'destroy']);
 Route::get('/details', [DetailController::class, 'index']);
 
 Route::get('/shopping-cart', [AddToCartController::class, 'index']);
+Route::get('/add/{id}',[AddToCartController::class,'add']);
+Route::get('/show',[AddToCartController::class,'show']);
+Route::get('/remove/{rowId}',[AddToCartController::class,'remove']);
+Route::get('/update',[AddToCartController::class,'update']);
+Route::get('/destroy',[AddToCartController::class,'destroy']);
 
 Route::get('/checkout', [CheckoutController::class, 'index']);
 

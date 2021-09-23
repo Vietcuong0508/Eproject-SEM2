@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\AddToCart;
+use App\Models\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 class AddToCartController extends Controller
@@ -14,69 +16,27 @@ class AddToCartController extends Controller
         return view('/client/shopping-cart', ['list' => $list]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function add($id){
+        $product = Product::find($id);
+        Cart::add($product->id,$product->name,1,floatval($product->price),10,['thumbnail' => $product->thumbnail]);
+//        return $cart;
+        return redirect('/show')->with('add','Thêm mới sản phẩm vào giỏ hàng thành công');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function show(){
+        return view('/client/shopping-cart');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\AddToCart  $addToCart
-     * @return \Illuminate\Http\Response
-     */
-    public function show(AddToCart $addToCart)
-    {
-        //
+    public function update(Request $request){
+        $id = $request->get('rowId');
+        $quantity = $request->get('quantity');
+        Cart::update($id,$quantity);
+        return redirect('/show')->with('update','Update sản phẩm thành công');
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\AddToCart  $addToCart
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(AddToCart $addToCart)
-    {
-        //
+    public function remove($rowId){
+        Cart::remove($rowId);
+        return redirect('/show')->with('remove','Xóa sản phẩm khỏi giỏ hàng thành công');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AddToCart  $addToCart
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, AddToCart $addToCart)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\AddToCart  $addToCart
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(AddToCart $addToCart)
-    {
-        //
+    public function destroy(){
+        Cart::destroy();
+        return redirect('/show')->with('destroy','Xóa tất cả sản phẩm khỏi giỏ hàng thành công');
     }
 }
