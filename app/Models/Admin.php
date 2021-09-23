@@ -17,6 +17,5 @@ class Admin extends Model
         'username',
         'password',
         'permission',
-        'status',
     ];
 }

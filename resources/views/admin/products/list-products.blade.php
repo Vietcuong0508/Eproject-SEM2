@@ -1,6 +1,9 @@
 @section('title', 'Product')
 @extends('admin.layouts.master')
 @section('custom-style')
+
+    <link rel="stylesheet" href="/libs/client/css/bootstrap.min.css">
+
     <style>
 
     </style>
@@ -41,13 +44,13 @@
                     <td>{{$product->price}}</td>
                     <td class="row hidden-phone">
                         <a href="/edit-products/{{$product->id}}" style="margin-right: 5px">
-                            <button class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</button>
                         </a>
                         <form action="/destroy-products/{{$product->id}}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn px-3  btn-danger" href="#" title="Delete"
-                                    onclick="return confirm('Are you sure')"><i class="fas fa-trash-alt"></i> Delete
+                                    onclick="return confirm('Are you sure')"><i class="fas fa-trash-alt"></i> Xóa
                             </button>
                         </form>
                     </td>
@@ -59,7 +62,7 @@
             @if ($list->lastPage() > 1)
                 <ul class="pagination">
                     <li class="{{ ($list->currentPage() == 1) ? ' disabled' : '' }}">
-                        <a href="{{ $list->url(1) }}">Previous</a>
+                        <a href="{{ $list->url(1) }}">Trước</a>
                     </li>
                     @for ($i = 1; $i <= $list->lastPage(); $i++)
                         <li class="{{ ($list->currentPage() == $i) ? ' active' : '' }}">
@@ -67,7 +70,7 @@
                         </li>
                     @endfor
                     <li class="{{ ($list->currentPage() == $list->lastPage()) ? ' disabled' : '' }}">
-                        <a href="{{ $list->url($list->currentPage()+1) }}">Next</a>
+                        <a href="{{ $list->url($list->currentPage()+1) }}">Sau</a>
                     </li>
                 </ul>
             @endif

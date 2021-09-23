@@ -16,16 +16,13 @@
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                        <p>Bảng Điều Khiển<i class="right fas fa-angle-left"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/admin" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Dashboard</p>
+                                <p>Bảng Điều Khiển</p>
                             </a>
                         </li>
                     </ul>
@@ -33,19 +30,19 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fab fa-product-hunt"></i>
-                        <p>Product<i class="right fas fa-angle-left"></i></p>
+                        <p>Sản Phẩm<i class="right fas fa-angle-left"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/create-products" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Create Product</p>
+                                <p>Thêm Mới Sản Phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/list-products" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List Product</p>
+                                <p>Danh Sách Sản Phẩm</p>
                             </a>
                         </li>
                     </ul>
@@ -53,19 +50,19 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
-                        <p>User<i class="right fas fa-angle-left"></i></p>
+                        <p>Tài Khoản<i class="right fas fa-angle-left"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="/create-user" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Create User</p>
+                                <p>Thêm Mới Tài Khoản</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="/user" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List User</p>
+                                <p>Danh Sách Tài Khoản</p>
                             </a>
                         </li>
                     </ul>
@@ -73,13 +70,13 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fab fa-first-order"></i>
-                        <p>Order<i class="right fas fa-angle-left"></i></p>
+                        <p>Đơn Hàng<i class="right fas fa-angle-left"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List Order</p>
+                                <p>Danh Sách Đơn Hàng</p>
                             </a>
                         </li>
                     </ul>

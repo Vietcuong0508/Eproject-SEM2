@@ -25,12 +25,12 @@
         <table class="table mt-5">
             <thead>
             <tr>
-                <th>Full Name</th>
-                <th>Phone</th>
+                <th>Họ Và Tên</th>
+                <th>Số Điện Thoại</th>
                 <th>Email</th>
-                <th>Address</th>
-                <th>Permission</th>
-                <th class="col-3">Action</th>
+                <th>Địa Chỉ</th>
+                <th>Quền Hạn</th>
+                <th class="col-3">Hành Động</th>
             </tr>
             </thead>
             <tbody>
@@ -43,12 +43,12 @@
                     <td>{{$users->permission}}</td>
                     <td class="row hidden-phone">
                         <a href="/edit-user/{{$users->id}}" style="margin-right: 5px">
-                            <button class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></a>
+                            <button class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</button></a>
                         <form action="/destroy-user/{{$users->id}}" method="post" style="float: left">
                             @csrf
                             @method('delete')
                             <button class="btn px-3  btn-danger" href="#" title="Delete"
-                                    onclick="return confirm('Are you sure')"><i class="fas fa-trash-alt"></i> Delete
+                                    onclick="return confirm('Are you sure')"><i class="fas fa-trash-alt"></i> Xóa
                             </button>
                         </form>
                     </td>

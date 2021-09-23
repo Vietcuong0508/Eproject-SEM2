@@ -1,6 +1,9 @@
 @section('title', 'Sản Phẩm')
 @extends('client.layouts.master-1')
 @section('custom-style')
+
+    <link rel="stylesheet" href="/libs/client/css/bootstrap.min.css">
+
     <style>
         .pagination {
             display: flex;

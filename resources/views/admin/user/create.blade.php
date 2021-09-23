@@ -18,7 +18,7 @@
                                     <h3 class="mb-3 text-uppercase">Đăng Kí</h3>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label">Tên Đầy Đủ</label>
+                                        <label class="form-label">Họ Và Tên</label>
                                         <input type="text" class="form-control border-success" name="fullName"
                                                placeholder=" ">
                                     </div>

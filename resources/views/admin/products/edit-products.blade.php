@@ -16,47 +16,74 @@
                                 @method('put')
                                 @csrf
                                 <div class="card-body p-md-5 text-black">
-                                    <h3 class="mb-3 text-uppercase">Create Product</h3>
+                                    <h3 class="mb-3 text-uppercase">Thêm Mới Sản Phẩm</h3>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label">Name</label>
+                                        <label class="form-label">Tên</label>
                                         <input type="text" class="form-control border-success" name="name"
-                                               value="{{$edit->name}}">
+                                               placeholder="" value="{{$edit->name}}">
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <label class="form-label">Thumbnail</label>
+                                                <label class="form-label">Hình Ảnh</label>
                                                 <input type="text" class="form-control border-success" name="thumbnail"
-                                                       value="{{$edit->thumbnail}}">
+                                                       placeholder=" " value="{{$edit->thumbnail}}">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <label class="form-label">Weight</label>
+                                                <label class="form-label">Khối Lượng</label>
                                                 <input type="text" class="form-control border-success" name="weight"
-                                                       value="{{$edit->weight}}">
+                                                       placeholder=" " value="{{$edit->weight}}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label">Giá</label>
+                                                <input type="text" class="form-control border-success" name="price"
+                                                       placeholder=" " value="{{$edit->price}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label">Thể Loại</label>
+                                                <input type="text" class="form-control border-success" name="category"
+                                                       placeholder=" " value="{{$edit->category}}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label">Tên Nhà Vườn</label>
+                                                <input type="text" class="form-control border-success" name="gardenName"
+                                                       placeholder=" " value="{{$edit->gardenName}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label">Chất Dinh Dưỡng</label>
+                                                <input type="text" class="form-control border-success" name="nutrient"
+                                                       placeholder=" " value="{{$edit->nutrient}}">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label">Price</label>
-                                        <input type="text" class="form-control border-success" name="price"
-                                               value="{{$edit->price}}">
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label">gardener's name</label>
-                                        <input type="text" class="form-control border-success" name="gardenName"
-                                               value="{{$edit->gardenName}}">
+                                        <label class="form-label">Vitamin</label>
+                                        <input type="text" class="form-control border-success" name="vitamin"
+                                               placeholder="" value="{{$edit->vitamin}}">
                                     </div>
 
                                     <div class="row justify-content-center px-3">
-                                        <button type="submit" class="btn btn-success">Submit form</button>
+                                        <button type="submit" class="btn btn-success">Thêm Mới</button>
                                     </div>
-
                                 </div>
                             </form>
                         </div>

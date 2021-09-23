@@ -57,11 +57,27 @@
                                         </div>
                                     </div>
 
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline mb-4">
+                                                <label class="form-label">Tên Nhà Vườn</label>
+                                                <input type="text" class="form-control border-success" name="gardenName"
+                                                       placeholder=" ">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label">Chất Dinh Dưỡng</label>
+                                                <input type="text" class="form-control border-success" name="nutrient"
+                                                       placeholder=" ">
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label">Tên Nhà Vườn</label>
-                                        <input type="text" class="form-control border-success" name="gardenName"
-                                               placeholder=" ">
+                                        <label class="form-label">Vitamin</label>
+                                        <input type="text" class="form-control border-success" name="vitamin"
+                                               placeholder="">
                                     </div>
 
                                     <div class="row justify-content-center px-3">
