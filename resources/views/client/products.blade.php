@@ -8,6 +8,116 @@
             list-style: none;
             border-radius: 0.25rem;
         }
+
+        .pagination {
+            margin-bottom: 20px;
+        }
+
+        .pagination .page-item.page-indicator .page-link {
+            padding: .65rem .8rem;
+            font-size: 14px;
+            border-radius: 0;
+        }
+
+        .pagination .page-item.page-indicator:hover .page-link {
+            color: #454545;
+        }
+
+        .pagination .page-item .page-link {
+            border-radius: 0;
+            text-align: center;
+            padding: 0.55rem 1rem;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: #454545;
+            border: 1px solid #eaeaea;
+        }
+
+        .pagination .page-item .page-link:hover i, .pagination .page-item .page-link span {
+            color: #fff;
+        }
+
+        .pagination .page-item .page-link:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+
+        .pagination .page-item .page-link:hover {
+            background: #593bdb;
+            color: #fff;
+            border-color: #593bdb;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #593bdb;
+            border-color: #593bdb;
+            color: #fff;
+        }
+
+        .pagination .page-item .page-link {
+            color: #454545;
+        }
+
+        .pagination .page-item:last-child .page-link {
+            margin-right: 0;
+        }
+
+        [direction="rtl"] .pagination .page-item:first-child .page-link {
+            margin-right: 0;
+        }
+
+        .pagination-gutter .page-item {
+            margin-right: 7px;
+        }
+
+        .pagination-gutter .page-item .page-link {
+            border-radius: 3px !important;
+        }
+
+        .pagination-circle .page-item {
+            margin-right: 7px;
+        }
+
+        .pagination-circle .page-item .page-link, .pagination-circle .page-item.page-indicator .page-link {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            line-height: 40px;
+            border-radius: 50% !important;
+            padding: 0;
+        }
+
+        .pagination.pagination-md .page-item .page-link {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+        .pagination.pagination-sm .page-item.page-indicator .page-link {
+            font-size: 12px;
+        }
+
+        .pagination.pagination-sm .page-item .page-link {
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+        .pagination.pagination-xs .page-item.page-indicator .page-link {
+            font-size: 10px;
+        }
+
+        .pagination.pagination-xs .page-item .page-link {
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+
     </style>
 @endsection
 @section('main-content')
@@ -40,58 +150,63 @@
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                                <img src="{{$newProduct[0] -> thumbnail}}">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[0] -> name}}</h6>
+                                                <span>{{$newProduct[0] -> price}}</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                                <img src="{{$newProduct[1] -> thumbnail}}"
+                                                     alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[1] -> name}}</h6>
+                                                <span>{{$newProduct[1] -> price}}</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                                <img src="{{$newProduct[2] -> thumbnail}}"
+                                                     alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[2] -> name}}</h6>
+                                                <span>{{$newProduct[2] -> price}}</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                                <img src="{{$newProduct[3] -> thumbnail}}"
+                                                     alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[3] -> name}}</h6>
+                                                <span>{{$newProduct[3] -> price}}</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                                <img src="{{$newProduct[4] -> thumbnail}}"
+                                                     alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[4] -> name}}</h6>
+                                                <span>{{$newProduct[4] -> price}}</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                                <img src="{{$newProduct[5] -> thumbnail}}"
+                                                     alt="">
                                             </div>
                                             <div class="latest-product__item__text">
-                                                <h6>Crab Pool Security</h6>
-                                                <span>$30.00</span>
+                                                <h6>{{$newProduct[5] -> name}}</h6>
+                                                <span>{{$newProduct[5] -> price}}</span>
                                             </div>
                                         </a>
                                     </div>
@@ -144,7 +259,7 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="product__pagination">
+                    <div class="row">
                         <div class="col-6">
                             @if ($list->lastPage() > 1)
                                 <ul class="pagination">
