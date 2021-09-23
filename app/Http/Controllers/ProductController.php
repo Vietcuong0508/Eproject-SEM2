@@ -16,8 +16,10 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('shipName', 'like', '%' .$search. '%');
         }
         $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
+        $newProduct = Product::query()->orderBy('id', 'DESC')->take(6)->get();
         return view('client/products', [
             'list' => $events,
+            'newProduct' => $newProduct
         ]);
     }
 

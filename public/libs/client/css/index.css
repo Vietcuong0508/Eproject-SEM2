@@ -4263,8 +4263,8 @@ ul, ol {
 }
 
 .latest-product__item__pic img {
-    height: 110px;
-    width: 110px
+    height: 110px !important;
+    width: 110px !important;
 }
 
 .latest-product__item__text {
@@ -4780,6 +4780,7 @@ ul, ol {
 .product__item {
     margin-bottom: 50px;
     border: solid green 1px;
+    padding: 10px 10px;
     border-radius: 10px;
 }
 

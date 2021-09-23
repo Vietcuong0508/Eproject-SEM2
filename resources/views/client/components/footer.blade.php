@@ -18,7 +18,7 @@
                     <h6>Liên Kết Hữu Dụng</h6>
                     <ul>
                         <li><a href="#">Về Chúng Tôi</a></li>
-                        <li><a href="#">Về Cửa Hàng Của Chúng Tôi</a></li>
+                        <li><a href="#">Về Cửa Hàng Của Tôi</a></li>
                         <li><a href="#">Mua sắm an toàn</a></li>
                         <li><a href="#">Liên Hệ</a></li>
                     </ul>
