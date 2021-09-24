@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Detail;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class DetailController extends Controller
@@ -10,8 +11,8 @@ class DetailController extends Controller
 
     public function index()
     {
-        $list = Detail::all();
-        return view('/client/shop-details', ['list' => $list]);
+        $list = Product::paginate(4);
+        return view('/client/shop-details', ['item' => $list]);
     }
 
     /**
@@ -41,9 +42,11 @@ class DetailController extends Controller
      * @param  \App\Models\Detail  $detail
      * @return \Illuminate\Http\Response
      */
-    public function show(Detail $detail)
+    public function show($id)
     {
-        //
+        $news = Product::where('id', '=', $id)->select('*')->first();
+        $events = Product::paginate(8);
+        return view('/client/shop-details', ['news' => $news, 'list' => $events,]);
     }
 
     /**
