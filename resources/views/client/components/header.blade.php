@@ -21,7 +21,6 @@
             <li><a href="/products">Sản Phẩm</a></li>
             <li><a href="#">Pages</a>
                 <ul class="header__menu__dropdown">
-                    <li><a href="/details">Chi Tiết</a></li>
                     <li><a href="/shopping-cart">Giỏ Hàng</a></li>
                     <li><a href="/checkout">Thanh Toán</a></li>
                 </ul>
@@ -56,7 +55,6 @@
                         <li><a href="/products">Sản Phẩm</a></li>
                         <li><a href="#">Pages</a>
                             <ul class="header__menu__dropdown">
-                                <li><a href="/details">Chi Tiết</a></li>
                                 <li><a href="/shopping-cart">Giỏ Hàng</a></li>
                                 <li><a href="/checkout">Thanh Toán</a></li>
                             </ul>

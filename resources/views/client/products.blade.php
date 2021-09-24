@@ -249,7 +249,7 @@
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
                                         <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fas fa-info"></i></a></li>
+                                            <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a></li>
                                             <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
@@ -285,7 +285,6 @@
             </div>
         </div>
     </section>
-
 @endsection
 @section('custom-js')
 @endsection
