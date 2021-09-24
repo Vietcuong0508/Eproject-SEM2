@@ -3757,8 +3757,8 @@ ul, ol {
 }
 
 .header__cart {
-    text-align: right;
-    padding: 24px 0
+    text-align: center;
+    padding: 28px 0
 }
 
 .header__cart ul {
@@ -6769,3 +6769,32 @@ a {
     color: #fff;
     width: 100%
 }
+
+.btn-submit {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #28aa00, #47c200);
+    padding: 10px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 20px
+}
+
+.btn-submit:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #37c205, #0e8e04)
+}
+
+.btn-register {
+    border-radius: 50px;
+    color: #89ff41;
+    background-color: #fff;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: 2px solid #68ff5a !important
+}
+.btn-register:hover {
+    color: white;
+    background-image: linear-gradient(to right, #95f65c, #0aff03)
+}
+
