@@ -76,10 +76,25 @@
             </div>
             <div class="col-lg-2">
                 <div class="header__cart">
-                    <ul>
-                        <li><a href="/shopping-cart"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-user"></i></a></li>
-                    </ul>
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                        <div class="dropdown float-right">
+                            <button class="btn dropdown-toggle border-bottom" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user"></i>&ensp;{{\Illuminate\Support\Facades\Auth::user()->fullName}}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item border-0" href="/shopping-cart"><i class="fa fa-shopping-bag">
+                                        Giỏ hàng</i></a>
+                                <a class="dropdown-item border-0" href="{{route('logout')}}"><i
+                                        class="fas fa-power-off ic-logout"></i> Đăng xuất</a>
+                            </div>
+                            @else
+                                <ul>
+                                    <li><a href="{{route('login')}}"><i class="fa fa-user">&ensp;Login</i></a></li>
+                                </ul>
+                            @endif
+                        </div>
                 </div>
             </div>
         </div>
