@@ -3681,7 +3681,7 @@ ul, ol {
 .header__menu ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 40px;
     position: relative
 }
 

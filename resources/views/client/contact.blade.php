@@ -88,13 +88,13 @@
             <form action="#">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Tên Của Bạn">
+                        <input type="text" placeholder="Tên Của Bạn" name="name">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Email Của Bạn">
+                        <input type="text" placeholder="Email Của Bạn" name="email">
                     </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Lời Nhắn Của Bạn"></textarea>
+                        <textarea placeholder="Lời Nhắn Của Bạn" name="note"></textarea>
                         <button type="submit" class="site-btn">Gừi Lời Nhắn</button>
                     </div>
                 </div>

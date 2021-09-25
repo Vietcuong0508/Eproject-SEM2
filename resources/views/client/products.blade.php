@@ -169,8 +169,7 @@
                                         </option>
                                         <option value="3" {{$price && $price == 3 ? 'selected':''}}>50.000-100.000 VNĐ
                                         </option>
-                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000
-                                            VNĐ
+                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000 VNĐ
                                         </option>
                                     </select>
                                     <select class="selectpicker form-control" id="category" name="category">
@@ -194,7 +193,7 @@
                                         <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ
                                             phần Deli Fresh
                                         </option>
-                                        <option value="4" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty
+                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty
                                             TNHH Lion Golden
                                         </option>
                                     </select>

@@ -11,6 +11,10 @@
             border-color: #6c757d;
             width: 113px;
             height: 20px;
+            margin-left: 300px;
+        }
+        .btn-success {
+            height: 25px;
         }
     </style>
 @endsection
@@ -47,18 +51,19 @@
             </select>
             <select class="selectpicker" id="gardenName" name="gardenName">
                 <option selected disabled hidden>Lọc theo nhà vườn</option>
-                <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại rau hữu cơ Organik Đà
-                    Lạt
+                <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại rau hữu cơ Organik Đà Lạt
                 </option>
                 <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại hữu cơ BIOPHAP farm
                 </option>
-                <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại hữu cơ Viễn Phú</option>
+                <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại hữu cơ Viễn Phú
+                </option>
                 <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ phần Deli Fresh
                 </option>
-                <option value="4" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty TNHH Lion Golden</option>
+                <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty TNHH Lion Golden
+                </option>
             </select>
-
-            <input class="search-admin" type="text" name="search" id="search" placeholder="search">
+                <input class="search-admin" type="text" name="search" id="search" placeholder="search">
+                <button type="submit" class="btn-success">Tìm Kiếm</button>
         </form>
     </div>
     <div class="container">

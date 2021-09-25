@@ -37,7 +37,7 @@ Route::get('/productDetail/{id}', [DetailController::class, 'show']);
 
 
 Route::get('/user', [AdminController::class, 'index']);
-Route::get('/register', [AdminController::class, 'getregister'])->name('register');
+Route::get('/register', [AdminController::class, 'getRegister'])->name('register');
 Route::post('/register', [AdminController::class, 'postRegister']);
 Route::get('/login', [AdminController::class, 'getLogin'])->name('login');
 Route::post('/login', [AdminController::class, 'postLogin']);
@@ -60,3 +60,4 @@ Route::get('/destroy',[AddToCartController::class,'destroy']);
 Route::get('/checkout', [CheckoutController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact-form', [ContactController::class, 'store']);

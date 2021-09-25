@@ -51,13 +51,13 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
         }
         if ($category == 1) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'rau');
+            $queryBuilder = $queryBuilder->where('category', '=', 1);
         }
         if ($category == 2) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'củ');
+            $queryBuilder = $queryBuilder->where('category', '=', 2);
         }
         if ($category == 3) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'quả');
+            $queryBuilder = $queryBuilder->where('category', '=', 3);
         }
         $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
         $newProduct = Product::query()->orderBy('id', 'DESC')->take(6)->get();
@@ -75,9 +75,9 @@ class ProductController extends Controller
         $queryBuilder = Product::query();
         $search = $request->query('search');
         $gardenName = $request->get('gardenName');
-        $rau = Product::query()->where('category', '=', 'Rau')->limit(8)->get();
-        $cu = Product::query()->where('category', '=', 'Củ')->limit(8)->get();
-        $qua = Product::query()->where('category', '=', 'Quả')->limit(8)->get();
+        $rau = Product::query()->where('category', '=', 1)->limit(8)->get();
+        $cu = Product::query()->where('category', '=', 2)->limit(8)->get();
+        $qua = Product::query()->where('category', '=', 3)->limit(8)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 -> orWhere('vitamin', 'like', '%' . $search . '%')
@@ -152,13 +152,13 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
         }
         if ($category == 1) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'rau');
+            $queryBuilder = $queryBuilder->where('category', '=', 1);
         }
         if ($category == 2) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'củ');
+            $queryBuilder = $queryBuilder->where('category', '=', 2);
         }
         if ($category == 3) {
-            $queryBuilder = $queryBuilder->where('category', 'like', 'quả');
+            $queryBuilder = $queryBuilder->where('category', '=', 3);
         }
         $events = $queryBuilder->paginate(10)->appends(['search' => $search]);
         return view('/admin/products/list-products', [
