@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipName'); // ship cho ai
             $table->string('shipPhone'); // số phone gọi khi cần là gì
             $table->string('shipAddress'); // về đâu
+            $table->string('email'); // gửi thông tin đơn hàng
             $table->string('note')->nullable(); // có lưu gì không
             $table->integer('isCheckout')->default(CheckoutEnum::UNPAID);// thanh toán hay chưa
             $table->timestamps();

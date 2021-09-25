@@ -65,6 +65,7 @@
         <table class="table mt-5">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>Tên</th>
                 <th>Hình Ảnh</th>
                 <th>Cân Nặng</th>
@@ -75,6 +76,7 @@
             <tbody>
             @foreach($list as $product)
                 <tr>
+                    <td>{{$product->id}}</td>
                     <td>{{$product->name}}</td>
                     <td><img src="{{$product->thumbnail}}" width="60px" height="50px"></td>
                     <td>{{$product->weight}}</td>

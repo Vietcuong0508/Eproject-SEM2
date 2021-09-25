@@ -123,8 +123,13 @@
 
         .selectpicker {
             width: 100%;
-            height: 25px;
+            height: 30px;
             margin-top: 5px;
+        }
+
+        .search-product {
+            height: 30px;
+            /*margin-top: 25px;*/
         }
 
     </style>
@@ -156,7 +161,7 @@
                             <h4>Lọc Theo</h4>
                             <ul>
                                 <form action="" id="filter_form">
-                                    <select class="selectpicker" id="price" name="price">
+                                    <select class="selectpicker form-control" id="price" name="price">
                                         <option selected disabled hidden>Lọc theo giá</option>
                                         <option value="1" {{$price && $price == 1 ? 'selected':''}}>0-20.000 VNĐ
                                         </option>
@@ -168,13 +173,13 @@
                                             VNĐ
                                         </option>
                                     </select>
-                                    <select class="selectpicker" id="category" name="category">
+                                    <select class="selectpicker form-control" id="category" name="category">
                                         <option selected disabled hidden>Lọc danh mục</option>
                                         <option value="1" {{$category && $category == 1 ? 'selected':''}}>Rau</option>
                                         <option value="2" {{$category && $category == 2 ? 'selected':''}}>Củ</option>
                                         <option value="3" {{$category && $category == 3 ? 'selected':''}}>Quả</option>
                                     </select>
-                                    <select class="selectpicker" id="gardenName" name="gardenName">
+                                    <select class="selectpicker form-control" id="gardenName" name="gardenName">
                                         <option selected disabled hidden>Lọc theo nhà vườn</option>
                                         <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại
                                             rau hữu cơ Organik Đà
@@ -282,13 +287,16 @@
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
+                                    {{--                                    <h6><span>16</span> Products found</h6>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
                                 <form action="" id="filter_form">
-                                    <input class="search-product" type="text" name="search" id="search"
-                                           placeholder="Tìm Kiếm">
+                                    <div class="row">
+                                        <input class="search-product" type="text" name="search" id="search"
+                                               placeholder="Tìm Kiếm">
+                                        <button type="submit" class="btn-success">Tìm Kiếm</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -299,7 +307,8 @@
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
                                         <ul class="product__item__pic__hover">
-                                            <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a></li>
+                                            <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
+                                            </li>
                                             <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>

@@ -70,6 +70,47 @@ class ProductController extends Controller
         ]);
     }
 
+    public function home(Request $request)
+    {
+        $queryBuilder = Product::query();
+        $search = $request->query('search');
+        $gardenName = $request->get('gardenName');
+        $rau = Product::query()->where('category', '=', 'Rau')->limit(8)->get();
+        $cu = Product::query()->where('category', '=', 'Củ')->limit(8)->get();
+        $qua = Product::query()->where('category', '=', 'Quả')->limit(8)->get();
+        if ($search && strlen($search) > 0) {
+            $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
+                -> orWhere('vitamin', 'like', '%' . $search . '%')
+                -> orWhere('nutrient', 'like', '%' . $search . '%');
+        }
+
+        if ($gardenName == 1) {
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
+        }
+        if ($gardenName == 2) {
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
+        }
+        if ($gardenName == 3) {
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
+        }
+        if ($gardenName == 4) {
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
+        }
+        if ($gardenName == 5) {
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
+        }
+        $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
+        $newProduct = Product::query()->orderBy('id', 'DESC')->take(200)->get();
+        return view('client/home', [
+            'list' => $events,
+            'newProduct' => $newProduct,
+            'gardenName' => $gardenName,
+            'rau' => $rau,
+            'cu' => $cu,
+            'qua' => $qua,
+        ]);
+    }
+
     public function list(Request $request)
     {
         $queryBuilder = Product::query();

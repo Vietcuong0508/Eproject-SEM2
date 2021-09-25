@@ -23,9 +23,7 @@ Route::get('/admin', function () {
     return view('admin/dashboard');
 });
 
-Route::get('/', function () {
-    return view('client/home');
-})->name('index');
+Route::get('/', [ProductController::class, 'home'])->name('index');
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/create-products', [ProductController::class, 'create'])->name('create-products');

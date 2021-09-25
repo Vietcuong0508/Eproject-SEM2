@@ -1068,7 +1068,7 @@ class ProductSeeder extends Seeder
                 'category'=>'quả',
                 'vitamin'=>'Vitamin A, vitamin C',
                 'nutrient'=>'Cellulose, pectin, sắt, canxi, chất xơ và ma-giê,...',
-                'thumbnail'=>'https://l.facebook.com/l.php?u=https%3A%2F%2Fbachhoanongsan.com%2Fwp-content%2Fuploads%2F2020%2F06%2Fthanh-long-ru%25E1%25BB%2599t-tr%25E1%25BA%25AFng.jpg%3Ffbclid%3DIwAR3bEoDXnHI-gznMfGOo9VHNct7_kXjpqICGFl0NhlIT8HZVxcM5tFSB8i0&h=AT1iRYaFBWGrgP2E9lM0jmvm1z3AUWyH6Vqq_X1Q9iwZLU6m-lXtC4bmcx-HASIEqCFFy-cnKpcPbB3onwovKogPfZSMb-TU-9gRdDjxJrSaZOl34BFsLwnsWNJNMjPFDXmoizM1N93IBXmzxvnoEg',
+                'thumbnail'=>'http://snsfoods.com.vn/wp-content/uploads/2019/10/red.jpg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

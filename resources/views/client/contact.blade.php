@@ -45,7 +45,8 @@
                     <div class="contact__widget">
                         <span class="icon_clock_alt"></span>
                         <h4>Giờ Hoạt Động</h4>
-                        <p>Cả Ngày</p>
+                        <p>8:00 AM - 12h PM</p>
+                        <p>2:00 PM - 18h PM</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">

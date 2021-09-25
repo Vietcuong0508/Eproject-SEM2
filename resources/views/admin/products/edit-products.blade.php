@@ -52,8 +52,11 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label">Thể Loại</label>
-                                                <input type="text" class="form-control border-success" name="category"
-                                                       placeholder=" " value="{{$edit->category}}">
+                                                <select name="category" class="form-control border-success">
+                                                    @foreach(App\Enums\Category::getValues() as $type)
+                                                        <option {{$edit->type == $type ? 'selected' : ''}} value="{{$type}}">{{App\Enums\Category::getDescription($type)}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                     </div>

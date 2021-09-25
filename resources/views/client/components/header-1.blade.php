@@ -12,20 +12,19 @@
             <a href="#"><i class="fa fa-shopping-bag"></i></a>
         </div>
         <div class="header__top__right__auth">
-            <a href="#"><i class="fa fa-user"></i> Login</a>
+            <a href="#"><i class="fa fa-user"></i> Đăng Nhập</a>
         </div>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
             <li><a href="/">Trang Chủ</a></li>
             <li><a href="/products">Sản Phẩm</a></li>
-            <li><a href="#">Pages</a>
-                <ul class="header__menu__dropdown">
-
-                    <li><a href="/shopping-cart">Giỏ Hàng</a></li>
-                    <li><a href="/checkout">Thanh Toán</a></li>
-                </ul>
-            </li>
+            <li><a href="/shopping-cart">Giỏ Hàng</a></li>
+{{--            <li><a href="#">Pages</a>--}}
+{{--                <ul class="header__menu__dropdown">--}}
+{{--                    <li><a href="/checkout">Thanh Toán</a></li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
             <li><a href="#">Nhà Vườn</a>
                 <ul class="header__menu__dropdown">
                     <li><a href="/">Nhà Ông A</a></li>
@@ -54,12 +53,13 @@
                     <ul>
                         <li><a href="/">Trang Chủ</a></li>
                         <li><a href="/products">Sản Phẩm</a></li>
-                        <li><a href="#">Pages</a>
-                            <ul class="header__menu__dropdown">
-                                <li><a href="/shopping-cart">Giỏ Hàng</a></li>
-                                <li><a href="/checkout">Thanh Toán</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="/shopping-cart">Giỏ Hàng</a></li>
+{{--                        <li><a href="#">Pages</a>--}}
+{{--                            <ul class="header__menu__dropdown">--}}
+{{--                                --}}
+{{--                                <li><a href="/checkout">Thanh Toán</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                         <li><a href="#">Nhà Vườn</a>
                             <ul class="header__menu__dropdown">
                                 <li><a href="/">Nhà Ông A</a></li>
@@ -69,7 +69,7 @@
                                 <li><a href="/">Nhà Ông E</a></li>
                             </ul>
                         </li>
-                        <li><a href="/">Liên Hệ</a></li>
+                        <li><a href="/contact">Liên Hệ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -90,7 +90,7 @@
                             </div>
                             @else
                                 <ul>
-                                    <li><a href="{{route('login')}}"><i class="fa fa-user">&ensp;Login</i></a></li>
+                                    <li><a href="{{route('login')}}"><i class="fa fa-user">&ensp;Đăng Nhập</i></a></li>
                                 </ul>
                             @endif
                         </div>
@@ -107,27 +107,23 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span>Toàn Bộ Sản Phẩm</span>
-                    </div>
-                    <ul>
-                        <li><a href="#">Rau</a></li>
-                        <li><a href="#">Củ</a></li>
-                        <li><a href="#">Quả</a></li>
-                    </ul>
-                </div>
+{{--                <div class="hero__categories">--}}
+{{--                    <div class="hero__categories__all">--}}
+{{--                        <i class="fa fa-bars"></i>--}}
+{{--                        <span>Toàn Bộ Sản Phẩm</span>--}}
+{{--                    </div>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="#">Rau</a></li>--}}
+{{--                        <li><a href="#">Củ</a></li>--}}
+{{--                        <li><a href="#">Quả</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
             <div class="col-lg-9">
                 <div class="hero__search">
                     <div class="hero__search__form">
-                        <form action="#">
-                            <div class="hero__search__categories">
-                                Tất Cả Thể Loại
-                                <span class="arrow_carrot-down"></span>
-                            </div>
-                            <input type="text" placeholder="Bạn cần tìm gì?">
+                        <form action="/products" id="filter_form">
+                            <input name="search" type="text" placeholder="Bạn cần tìm gì?">
                             <button type="submit" class="site-btn">Tìm Kiếm</button>
                         </form>
                     </div>
