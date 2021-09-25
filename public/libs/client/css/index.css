@@ -3436,11 +3436,6 @@ ul, ol {
     background-position: top center
 }
 
-.spad {
-    padding-top: 100px;
-    padding-bottom: 100px
-}
-
 .primary-btn {
     display: inline-block;
     font-size: 14px;
@@ -3757,8 +3752,8 @@ ul, ol {
 }
 
 .header__cart {
-    text-align: right;
-    padding: 24px 0
+    text-align: center;
+    padding: 28px 0
 }
 
 .header__cart ul {
@@ -4936,7 +4931,7 @@ ul, ol {
 }
 
 .product__details__text p {
-    margin-bottom: 45px
+    margin-bottom: 25px
 }
 
 .product__details__text .primary-btn {
@@ -4954,9 +4949,7 @@ ul, ol {
 }
 
 .product__details__text ul {
-    border-top: 1px solid #ebebeb;
-    padding-top: 40px;
-    margin-top: 50px
+    margin-top: 10px
 }
 
 .product__details__text ul li {
@@ -4968,7 +4961,7 @@ ul, ol {
 
 .product__details__text ul li b {
     font-weight: 700;
-    width: 170px;
+    width: 80px;
     display: inline-block
 }
 
@@ -5038,19 +5031,19 @@ ul, ol {
 .product__details__tab .nav-tabs:before {
     position: absolute;
     left: 0;
-    top: 12px;
-    height: 1px;
-    width: 370px;
+    top: 20px;
+    height: 2px;
+    width: 420px;
     background: #ebebeb;
-    content: ""
+    content: "";
 }
 
 .product__details__tab .nav-tabs:after {
     position: absolute;
     right: 0;
-    top: 12px;
-    height: 1px;
-    width: 370px;
+    top: 20px;
+    height: 2px;
+    width: 420px;
     background: #ebebeb;
     content: ""
 }
@@ -6769,3 +6762,32 @@ a {
     color: #fff;
     width: 100%
 }
+
+.btn-submit {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #28aa00, #47c200);
+    padding: 10px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 20px
+}
+
+.btn-submit:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #37c205, #0e8e04)
+}
+
+.btn-register {
+    border-radius: 50px;
+    color: #89ff41;
+    background-color: #fff;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: 2px solid #68ff5a !important
+}
+.btn-register:hover {
+    color: white;
+    background-image: linear-gradient(to right, #95f65c, #0aff03)
+}
+

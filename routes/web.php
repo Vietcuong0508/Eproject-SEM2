@@ -25,7 +25,7 @@ Route::get('/admin', function () {
 
 Route::get('/', function () {
     return view('client/home');
-});
+})->name('index');
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/create-products', [ProductController::class, 'create'])->name('create-products');
@@ -35,8 +35,15 @@ Route::get('/new-products', [ProductController::class, 'newProduct'])->name('new
 Route::put('/update-products/{id}', [ProductController::class, 'update']);
 Route::get('/edit-products/{id}', [ProductController::class, 'edit']);
 Route::delete('/destroy-products/{id}', [ProductController::class, 'destroy']);
+Route::get('/productDetail/{id}', [DetailController::class, 'show']);
+
 
 Route::get('/user', [AdminController::class, 'index']);
+Route::get('/register', [AdminController::class, 'getregister'])->name('register');
+Route::post('/register', [AdminController::class, 'postRegister']);
+Route::get('/login', [AdminController::class, 'getLogin'])->name('login');
+Route::post('/login', [AdminController::class, 'postLogin']);
+Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
 Route::get('/create-user', [AdminController::class, 'create'])->name('create-user');
 Route::post('/create-user', [AdminController::class, 'storeAdmin']);
 Route::put('/update-user/{id}', [AdminController::class, 'update']);
@@ -44,7 +51,6 @@ Route::get('/edit-user/{id}', [AdminController::class, 'edit']);
 Route::delete('/destroy-user/{id}', [AdminController::class, 'destroy']);
 
 
-Route::get('/details', [DetailController::class, 'index']);
 
 Route::get('/shopping-cart', [AddToCartController::class, 'index']);
 Route::get('/add/{id}',[AddToCartController::class,'add']);
