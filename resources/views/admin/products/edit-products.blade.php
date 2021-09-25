@@ -16,7 +16,7 @@
                                 @method('put')
                                 @csrf
                                 <div class="card-body p-md-5 text-black">
-                                    <h3 class="mb-3 text-uppercase">Thêm Mới Sản Phẩm</h3>
+                                    <h3 class="mb-3 text-uppercase">Sửa Sản Phẩm</h3>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label">Tên</label>
@@ -82,7 +82,7 @@
                                     </div>
 
                                     <div class="row justify-content-center px-3">
-                                        <button type="submit" class="btn btn-success">Thêm Mới</button>
+                                        <button type="submit" class="btn btn-success">Gửi</button>
                                     </div>
                                 </div>
                             </form>
