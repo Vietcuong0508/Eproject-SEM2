@@ -54,7 +54,7 @@
                     <ul>
                         <li><a href="/">Trang Chủ</a></li>
                         <li><a href="/products">Sản Phẩm</a></li>
-                        <li><a href="/shopping-cart">Giỏ Hàng</a></li>
+                        <li><a href="/shopping/cart">Giỏ Hàng</a></li>
 
 {{--                        <li><a href="#">Pages</a>--}}
 {{--                            <ul class="header__menu__dropdown">--}}
