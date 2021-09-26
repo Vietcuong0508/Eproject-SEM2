@@ -6,6 +6,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,8 +57,17 @@ Route::get('/show',[AddToCartController::class,'show']);
 Route::get('/remove/{rowId}',[AddToCartController::class,'remove']);
 Route::get('/update',[AddToCartController::class,'update']);
 Route::get('/destroy',[AddToCartController::class,'destroy']);
+Route::post('/shopping/order', [AddToCartController::class, 'create_payment']);
 
 Route::get('/checkout', [CheckoutController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/contact-form', [ContactController::class, 'store']);
+
+Route::get('/about-us', function () {
+    return view('client/about-us');
+});
+
+Route::get('/about-web', function () {
+    return view('client/about-web');
+});

@@ -17,10 +17,10 @@
                 <div class="footer__widget">
                     <h6>Liên Kết Hữu Dụng</h6>
                     <ul>
-                        <li><a href="#">Về Chúng Tôi</a></li>
-                        <li><a href="#">Về Cửa Hàng Của Tôi</a></li>
+                        <li><a href="/about-us">Về Chúng Tôi</a></li>
+                        <li><a href="/about-web">Về Web Của Chúng Tôi</a></li>
                         <li><a href="#">Mua sắm an toàn</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="/contact">Liên Hệ</a></li>
                     </ul>
                 </div>
             </div>

@@ -71,7 +71,8 @@
                                                                             width="120px"></div>
                                                     <figcaption class="info"><a href="#" class="title text-dark"
                                                                                 data-abc="true"><h4>Tên Sản Phẩm:</h4>
-                                                        </a><p>{{$obj->name}}<br>Tên Nhà Vườn: {{$obj->gardenName}}</p>
+                                                        </a>
+                                                        <p>{{$obj->name}}<br>Tên Nhà Vườn: {{$obj->gardenName}}</p>
                                                     </figcaption>
                                                 </div>
                                             </td>
@@ -110,20 +111,22 @@
         <div class="container">
             <div class="checkout__form">
                 <h4>Chi Tiết Thanh Toán</h4>
-                <form action="#">
+                <form method="post" action="/shopping/order">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Họ Và Tên<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="shipName">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Địa Chỉ<span>*</span></p>
-                                        <input type="text" placeholder="" class="checkout__input__add">
+                                        <input type="text" placeholder="" class="checkout__input__add"
+                                               name="shipAddress">
                                     </div>
                                 </div>
                             </div>
@@ -131,19 +134,19 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Số Điện Thoại<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="shipPhone">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="text">
+                                        <input type="text" name="email">
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
                                 <p>Ghi Chú</p>
-                                <input type="text" placeholder="">
+                                <input type="text" placeholder="" name="note">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
@@ -165,8 +168,9 @@
                                                 {{\Gloudemans\Shoppingcart\Facades\Cart::subtotal()}} VND</strong></dd>
                                     </dl>
                                     <hr>
-                                    <a href="/checkout" class="btn btn-out btn-primary btn-square btn-main"
-                                       data-abc="true"> Thực Hiện Thanh Toán </a>
+                                    <button class="btn btn-out btn-primary btn-square btn-main">Thực Hiện
+                                        Thanh Toán
+                                    </button>
                                     <a href="/products" class="btn btn-out btn-success btn-square btn-main mt-2"
                                        data-abc="true">Tiếp Tục Mua Hàng</a>
                                 </div>

@@ -3898,7 +3898,7 @@ ul, ol {
     height: 50px;
     border: 1px solid #ebebeb;
     position: relative;
-    float: left
+    float: left;
 }
 
 .hero__search__form form .hero__search__categories {
@@ -6081,6 +6081,10 @@ ul, ol {
     .container {
         max-width: 1170px
     }
+
+    .hero__search__form {
+        margin-left: 200px;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -6089,7 +6093,7 @@ ul, ol {
     }
 
     .hero__search__form {
-        width: 490px
+        width: 490px;
     }
 
     .hero__categories__all {
