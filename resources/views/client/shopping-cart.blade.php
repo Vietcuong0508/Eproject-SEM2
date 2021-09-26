@@ -76,13 +76,10 @@
                                                     </figcaption>
                                                 </div>
                                             </td>
-                                            <td data-th="Quantity" style="width: 30%">
-                                                <input type="number" class="form-control text-center" min="1"
-                                                       name="quantity" value="{{$obj->qty}}" style="width: 30%">
-                                            </td>
-                                            <td>
-                                                <p class="price">{{number_format($obj->price * $obj->qty)}} VND</p>
-                                            </td>
+                                            <td><input style="outline: none; width: 150px" type="number" min="1"
+                                                       name="productQuantity"
+                                                       value="{{$products->quantity}}"></td>
+                                            <td>{{$products->quantity * $products->price}}</td>
                                             <td class="actions">
                                                 <div class="text-right">
                                                     <button class="btn btn-primary btn-md mb-2">

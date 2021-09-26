@@ -36,6 +36,7 @@ class ShoppingCartController extends Controller
             $cartItem->name = $product->name;
             $cartItem->thumbnail = $product->thumbnail;
             $cartItem->price = $product->price;
+            $cartItem->gardenName = $product->gardenName;
             $cartItem->quantity = intval($productQuantity);
         } else {
             $cartItem = $shoppingCart[$productId];

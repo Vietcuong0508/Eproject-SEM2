@@ -4,35 +4,48 @@
 @endsection
 
 @section('main-content')
-
+    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Giỏ hàng</h2>
+                        <div class="breadcrumb__option">
+                            <a href="/">Trang Chủ</a>
+                            <span>Giỏ Hàng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="container-fluid h-100">
         <div class="row">
             <div class="col-12">
+                @if(session('message'))
+                    <div class="w3-panel w3-green w3-display-container">
+  <span onclick="this.parentElement.style.display='none'"
+        class="w3-button w3-large w3-display-topright">&times;</span>
+                        <h5 class="text-light p-3">Success! {{session('message')}}</h5>
+                    </div>
+                @endif
+                @if(session('remove'))
+                    <div class="w3-panel w3-green w3-display-container">
+                        <span onclick="this.parentElement.style.display='none'"
+                              class="w3-button text-light w3-large w3-display-topright">&times;</span>
+                        <h5 class="text-light p-3">Success! {{session('remove')}}</h5>
+                    </div>
+                @endif
                 <div class="card">
                     <div class="table-responsive">
                         <table class="table table-borderless table-shopping-cart">
                             <thead>
-                            @if(session('message'))
-                                <div class="w3-panel w3-green w3-display-container">
-  <span onclick="this.parentElement.style.display='none'"
-        class="w3-button w3-large w3-display-topright">&times;</span>
-                                    <h3>Success!</h3>
-                                    <p>{{session('message')}}</p>
-                                </div>
-                            @endif
-                            @if(session('remove'))
-                                <div class="w3-panel w3-green w3-display-container">
-                        <span onclick="this.parentElement.style.display='none'"
-                              class="w3-button w3-large w3-display-topright">&times;</span>
-                                    <h3>Success!</h3>
-                                    <p>{{session('remove')}}</p>
-                                </div>
-                            @endif
                             <tr>
-                                <th>Sản Phẩm</th>
-                                <th>Giá</th>
+                                <th style="padding-left: 35px">Sản phẩm</th>
+                                <th>Tên sản Phẩm</th>
                                 <th>Số lượng</th>
-                                <th></th>
+                                <th>Tổng giá</th>
+                                <th>Chỉnh sửa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -52,36 +65,27 @@
                                         <td>
                                             <div class="itemside align-items-center">
                                                 <div class="aside"><img src="{{$products->thumbnail}}"
-                                                                        class="img-fluid d-none d-md-block rounded mb-2 shadow"
-                                                                        width="120px"></div>
-                                                <figcaption class="info"><a href="#" class="title text-dark"
-                                                                            data-abc="true"><h4>Tên Sản Phẩm:</h4>
-                                                    </a>
-                                                    <p>{{$products->name}}</p>
-{{--                                                    <br>Tên Nhà Vườn: {{$products->gardenName}}--}}
-                                                </figcaption>
+                                                                    class="img-fluid d-none d-md-block rounded shadow"
+                                                                    width="120px"></div>
                                             </div>
                                         </td>
-                                        <td>{{number_format($products->price)}} VND</td>
-                                        <td data-th="Quantity" style="width: 30%">
-                                            <input type="number" class="form-control text-center" min="1"
-                                                   name="quantity" value="{{$products->quantity}}" style="width: 30%">
+                                        <td><h5>{{$products->name}}</h5></td>
+                                        <td><input style="outline: none; width: 100px" type="number" min="1"
+                                                   name="productQuantity"
+                                                   value="{{$products->quantity}}"></td>
+                                        <td>{{$products->quantity * $products->price}}</td>
+
+                                        <td class="actions">
+                                            <div>
+                                                <button class="btn btn-primary btn-md mb-2">
+                                                    <i class="fas fa-sync"></i>
+                                                </button>
+                                                <a href="/shopping/remove?productId={{$products->id}}"
+                                                   class="btn btn-danger btn-md mb-2">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div>
                                         </td>
-                                        <td>
-                                            <p class="price">{{number_format($products->price * $products->quantity)}} VND</p>
-                                        </td>
-                                        <th>
-                                            <button class="btn btn-primary m-2 d-block" style="font-size: 15px"><i
-                                                    class="fas fa-edit"></i>
-                                                Update
-                                            </button>
-                                            <a class="btn btn-danger m-2"
-                                               href="/shopping/remove?productId={{$products->id}}"
-                                               onclick="return confirm('Ban co muon xoa?')">
-                                                <i class="fas fa-trash-alt"></i>
-                                                Remove
-                                            </a>
-                                        </th>
                                     </tr>
                                 </form>
                             @endforeach
