@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormProductRequest;
 use App\Models\Product;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -183,12 +183,13 @@ class ProductController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(FormProductRequest $request)
     {
         $product = new Product();
         $product->fill($request->all());
+        $request->validated();
         $product->save();
-        return redirect('/list-products');
+        return redirect('/list-products')->with('store','Thêm mới sản phẩm thành công');;
     }
 
     public function edit($id)
@@ -199,12 +200,13 @@ class ProductController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id)
+    public function update(FormProductRequest $request, $id)
     {
         $detail = Product::find($id);
         $detail->update($request->all());
+        $request->validated();
         $detail->save();
-        return redirect('list-products');
+        return redirect('list-products')->with('update','Update sản phẩm thành công');
     }
 
 
@@ -212,6 +214,6 @@ class ProductController extends Controller
     {
         $detail = Product::find($id);
         $detail->delete();
-        return redirect('list-products');
+        return redirect('list-products')->with('destroy','Xóa sản phẩm thành công');;
     }
 }

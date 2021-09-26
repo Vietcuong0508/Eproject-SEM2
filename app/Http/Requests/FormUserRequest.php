@@ -42,12 +42,12 @@ class FormUserRequest extends FormRequest
             'address.required' => 'Vui lòng nhập địa chỉ',
             'username.required' => 'Vui lòng nhập tài khoản',
             'password.required' => 'Vui lòng nhập mật khẩu',
-            'email.min' => 'Email tối thiểu là 5',
-            'username.min' => 'Tài khoản tối thiểu là 5',
-            'password.min' => 'Mật khẩu tối thiểu là 5',
-            'fullName' => 'Họ là tên tối thiểu là 5',
-            'phone.numeric' => 'Sô điện thoại là số',
-            'phone.min' => 'Sô điện thoại tối thiểu là 9',
+            'email.min' => 'Email tối thiểu là 5 ký tự',
+            'username.min' => 'Tài khoản tối thiểu là 5 ký tự',
+            'password.min' => 'Mật khẩu tối thiểu là 5 ký tự',
+            'fullName' => 'Họ là tên tối thiểu là 5 ký tự',
+            'phone.numeric' => 'Sô điện thoại phải là số',
+            'phone.min' => 'Sô điện thoại tối thiểu là 9 số',
 
 
         ];

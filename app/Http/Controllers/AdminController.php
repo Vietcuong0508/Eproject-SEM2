@@ -13,12 +13,12 @@ class AdminController extends Controller
     public function index()
     {
         $listUser = User::all();
-        return view('admin.list-user', ['list' => $listUser]);
+        return view('admin.user.list-user', ['list' => $listUser]);
     }
 
     public function create()
     {
-        return view('admin.admin');
+        return view('admin.user.create');
     }
 
     public function getRegister()
@@ -63,31 +63,26 @@ class AdminController extends Controller
         return redirect()->route('index');
     }
 
-    public function storeAdmin(Request $request)
+    public function storeAdmin(FormUserRequest $request)
     {
         $user = new User();
+        $request->validated();
         $user->fill($request->all());
         $user->password = Hash::make($request['password']);
         $user->save();
-        return redirect('/admin/list-user');
+        return redirect('/user')->with('storeAdmin','Thêm mới tài khoản thành công');
     }
 
-    public function update(Request $request, $id)
+    public function update(FormUserRequest $request, $id)
     {
         $obj = User::find($id);
         if ($obj == null) {
             return view('error.404');
         }
-        $obj->fullName = $request->get('fullName');
-        $obj->phone = $request->get('phone');
-        $obj->email = $request->get('email');
-        $obj->address = $request->get('address');
-        $obj->username = $request->get('username');
-        $obj->password = $request->get('password');
-        $obj->permission = $request->get('permission');
-        $obj->status = $request->get('status');
+        $request->validated();
+        $obj->update($request->all());
         $obj->save();
-        return redirect('/admin/list-user');
+        return redirect('/user')->with('update','Update tài khoản thành công');
     }
 
     public function edit($id)
@@ -97,7 +92,7 @@ class AdminController extends Controller
         if ($obj == null) {
             return view('error.404');
         }
-        return view('admin.edit', ['obj' => $obj]);
+        return view('admin.user.edit', ['obj' => $obj]);
     }
 
     public function destroy($id)
@@ -107,6 +102,6 @@ class AdminController extends Controller
             return view('error.404');
         }
         $obj->delete();
-        return redirect('/admin/list-user');
+        return redirect('/user')->with('destroy','Xóa tài khoản thành công');;
     }
 }

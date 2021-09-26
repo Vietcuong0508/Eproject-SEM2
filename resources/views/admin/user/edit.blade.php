@@ -16,11 +16,22 @@
                             @csrf
                             <div class="card-body p-md-5 text-black">
                                 <h3 class="mb-3 text-uppercase">Sửa Thông Tin Tài Khoản</h3>
-
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                                 <div class="form-outline mb-4">
                                     <label class="form-label">Tên Đầy Đủ</label>
                                     <input type="text" class="form-control border-success" name="fullName"
                                            value="{{$obj->fullName}}">
+                                    @error('fullName')
+                                    <div class="text-danger">* {{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div class="row">
@@ -30,6 +41,9 @@
                                             <input type="text" class="form-control border-success" name="phone"
                                                    value="{{$obj->phone}}">
                                         </div>
+                                        @error('phone')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
@@ -37,6 +51,9 @@
                                             <input type="text" class="form-control border-success" name="address"
                                                    value="{{$obj->address}}">
                                         </div>
+                                        @error('address')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -46,6 +63,9 @@
                                             <label class="form-label">Email</label>
                                             <input type="email" class="form-control border-success" name="email"
                                                    value="{{$obj->email}}">
+                                            @error('email')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
@@ -53,6 +73,9 @@
                                             <label class="form-label">Tên Người Dùng</label>
                                             <input type="text" class="form-control border-success" name="username"
                                                    value="{{$obj->username}}">
+                                            @error('username')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -63,6 +86,9 @@
                                             <label class="form-label">Mật Khẩu</label>
                                             <input type="password" class="form-control border-success" name="password"
                                                    value="{{$obj->password}}">
+                                            @error('password')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-4">
