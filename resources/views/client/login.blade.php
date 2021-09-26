@@ -37,13 +37,13 @@
                                 <form action="{{route('login')}}" method="post">
                                     @csrf
                                     <div class="card-body text-black" style="padding: 80px">
-                                        <h3 class="mb-3 text-uppercase">Login Form</h3>
+                                        <h3 class="mb-3 text-uppercase text-center">Đăng Nhập</h3>
                                         @if(session('error-login'))
                                             <div class="text-danger" style="font-weight: bold; margin-bottom: 10px;">
                                                 {{session('error-login')}}
                                             </div>
                                         @endif
-                                        <label class="form-label">User Name</label>
+                                        <label class="form-label">Tài khoản</label>
                                         <div class="input-group form-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-success border-success"><i class="fas fa-user" aria-hidden="true"></i></span>
@@ -51,8 +51,11 @@
                                             <input type="text" class="form-control border-success py-2" name="username"
                                                    placeholder=" ">
                                         </div>
+                                        @error('username')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
 
-                                        <label class="form-label">Password</label>
+                                        <label class="form-label mt-2">Mật khẩu</label>
                                         <div class="input-group form-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text  bg-success border-success"><i class="fas fa-key" aria-hidden="true"></i></span>
@@ -60,6 +63,9 @@
                                             <input type="password" class="form-control border-success" name="password"
                                                    placeholder=" ">
                                         </div>
+                                        @error('password')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                         <div class="row justify-content-center px-3"> <button type="submit" class="btn-block btn-submit">Submit form</button> </div>
                                         <div class="row justify-content-center my-2"> <a href="#" class="text-muted">Forgot Password?</a> </div>
                                         <div class="bottom text-center mb-5">

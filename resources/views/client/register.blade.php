@@ -1,6 +1,5 @@
 @section('title', 'Đăng Ký')
 @extends('client.layouts.master-1')
-
 @section('custom-style')
 
 @endsection
@@ -35,52 +34,72 @@
                             </div>
 
                             <div class="col-xl-6">
+
                                 <form action="{{ route('register') }}" method="post">
                                     @csrf
                                     <div class="card-body p-md-5 text-black">
-                                        <h3 class="mb-3 text-uppercase">Register Form</h3>
+                                        <h3 class="mb-3 text-uppercase text-center">Đăng Ký</h3>
                                         @if(session('success'))
                                             <div class="text-danger" style="font-weight: bold; margin-bottom: 10px;">
                                                 {{session('success')}}
                                             </div>
                                         @endif
                                         <div class="form-outline mb-4">
-                                            <label class="form-label">Full name</label>
+                                            <label class="form-label">Họ và tên</label>
                                             <input type="text" class="form-control border-success" name="fullName" placeholder=" ">
+                                            @error('fullName')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
+
 
                                         <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label">Phone</label>
+                                                    <label class="form-label">Số điện thoại</label>
                                                     <input type="text" class="form-control border-success" name="phone"
                                                            placeholder=" ">
                                                 </div>
+                                                @error('phone')
+                                                <div class="text-danger">* {{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label">Address</label>
+                                                    <label class="form-label">Địa chỉ</label>
                                                     <input type="text" class="form-control border-success" name="address"
                                                            placeholder=" ">
                                                 </div>
+                                                @error('address')
+                                                <div class="text-danger">* {{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
 
                                         <div class="form-outline mb-4">
                                             <label class="form-label">Email</label>
                                             <input type="email" class="form-control border-success" name="email" placeholder=" ">
+                                            @error('email')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label">User Name</label>
+                                            <label class="form-label">Tài khoản</label>
                                             <input type="text" class="form-control border-success" name="username"
                                                    placeholder=" ">
+                                            @error('username')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label">Password</label>
+                                            <label class="form-label">Mật khẩu</label>
                                             <input type="password" class="form-control border-success" name="password"
                                                    placeholder=" ">
+                                            @error('password')
+                                            <div class="text-danger">* {{ $message }}</div>
+                                            @enderror
                                         </div>
 
                                         <div class="form-outline mb-4" style="display: none">

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\FormUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,9 +31,10 @@ class AdminController extends Controller
         return view('client.login');
     }
 
-    public function postRegister(Request $request)
+    public function postRegister(FormUserRequest $request)
     {
         $user = new User();
+        $request->validated();
         $user->fill($request->all());
         $user->password = Hash::make($request['password']);
         $user->save();
@@ -40,7 +42,8 @@ class AdminController extends Controller
             ->with('success', 'Đăng kí thành công');
     }
 
-    public function postLogin(Request $request) {
+    public function postLogin(FormUserRequest $request) {
+        $request->validated();
         $arr = [
             'username' => $request->username,
             'password' => $request->password
