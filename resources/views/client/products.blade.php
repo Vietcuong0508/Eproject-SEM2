@@ -308,7 +308,7 @@
                                         <ul class="product__item__pic__hover">
                                             <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
                                             </li>
-                                            <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="/shopping/add?productId={{$obj->id}}&productQuantity=1"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">

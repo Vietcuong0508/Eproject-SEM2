@@ -13,6 +13,7 @@ class Order extends Model
         'shipAddress',
         'shipPhone',
         'status',
+        'email',
         'note',
     ];
 

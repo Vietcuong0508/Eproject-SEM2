@@ -19,28 +19,37 @@ class AddToCartController extends Controller
         return view('/client/shopping-cart', ['list' => $list]);
     }
 
-    public function add($id){
+    public function add($id)
+    {
         $product = Product::find($id);
-        Cart::add($product->id,$product->name,1,floatval($product->price),10,['thumbnail' => $product->thumbnail]);
+        Cart::add($product->id, $product->name, 1, floatval($product->price), 10, ['thumbnail' => $product->thumbnail]);
 //        return $cart;
-        return redirect('/show')->with('add','Thêm mới sản phẩm vào giỏ hàng thành công');
+        return redirect('/show')->with('add', 'Thêm mới sản phẩm vào giỏ hàng thành công');
     }
-    public function show(){
+
+    public function show()
+    {
         return view('/client/shopping-cart');
     }
-    public function update(Request $request){
+
+    public function update(Request $request)
+    {
         $id = $request->get('rowId');
         $quantity = $request->get('quantity');
-        Cart::update($id,$quantity);
-        return redirect('/show')->with('update','Update sản phẩm thành công');
+        Cart::update($id, $quantity);
+        return redirect('/show')->with('update', 'Update sản phẩm thành công');
     }
-    public function remove($rowId){
+
+    public function remove($rowId)
+    {
         Cart::remove($rowId);
-        return redirect('/show')->with('remove','Xóa sản phẩm khỏi giỏ hàng thành công');
+        return redirect('/show')->with('remove', 'Xóa sản phẩm khỏi giỏ hàng thành công');
     }
-    public function destroy(){
+
+    public function destroy()
+    {
         Cart::destroy();
-        return redirect('/show')->with('destroy','Xóa tất cả sản phẩm khỏi giỏ hàng thành công');
+        return redirect('/show')->with('destroy', 'Xóa tất cả sản phẩm khỏi giỏ hàng thành công');
     }
 
     public function create_payment(Request $request)
@@ -50,7 +59,7 @@ class AddToCartController extends Controller
         $order = new Order();
         $order->fill($request->all());
         $amount = 0;
-        foreach ($shopping_cart as $item){
+        foreach ($shopping_cart as $item) {
             $amount += $item->price * $item->quantity;
         }
         $order->total_price = $amount;
@@ -69,7 +78,8 @@ class AddToCartController extends Controller
         return view('/admin/order/list');
     }
 
-    public function delete_cart($id){
+    public function delete_cart($id)
+    {
         $shopping_cart = Session::get('shoppingCart');
         unset($shopping_cart[$id]);
         Session::put('shoppingCart', $shopping_cart);

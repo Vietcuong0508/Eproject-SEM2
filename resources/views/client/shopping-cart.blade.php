@@ -60,7 +60,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <form action="/update" method="get">
+                                <form action="/shopping/save" method="get">
                                     @foreach(\Gloudemans\Shoppingcart\Facades\Cart::content() as $obj)
                                         <tr>
                                             <input type="hidden" name="rowId" value="{{$obj->rowId}}">

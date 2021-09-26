@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('vitamin');
             $table->string('nutrient');
             $table->double('price');
+            $table->text('description');
             $table->timestamps();
         });
     }

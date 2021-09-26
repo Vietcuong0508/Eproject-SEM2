@@ -36,31 +36,28 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
                         <h3>{{$news->name}}</h3>
-                        <div class="product__details__rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <span>(18 reviews)</span>
-                        </div>
-                        <div class="product__details__price">{{$news->price}}</div>
-                        <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                            vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                            quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
-                        <ul>
-                            <li><b>Vitamin:</b> <span>{{$news->vitamin}}</span></li>
-                            <li><b>Nutrient:</b> <span>{{$news->nutrient}}</span></li>
-                            <li><b>Weight:</b> <span>{{$news->weight}}</span></li>
+{{--                        <div class="product__details__rating">--}}
+{{--                            <i class="fa fa-star"></i>--}}
+{{--                            <i class="fa fa-star"></i>--}}
+{{--                            <i class="fa fa-star"></i>--}}
+{{--                            <i class="fa fa-star"></i>--}}
+{{--                            <i class="fa fa-star-half-o"></i>--}}
+{{--                            <span>(18 reviews)</span>--}}
+{{--                        </div>--}}
+                        <div class="product__details__price">{{number_format($news->price)}} VND</div>
+                            <li><b>Thông tin :</b> <span>{{$news->description}}</span></li>
+                            <li><b>Vitamin :</b> <span>{{$news->vitamin}}</span></li>
+                            <li><b>Chất Dinh Dưỡng :</b> <span>{{$news->nutrient}}</span></li>
+                            <li><b>Khối Lượng :</b> <span>{{$news->weight}}</span></li>
                         </ul>
                         <div class="product__details__quantity mt-3 pt-5 border-top d-block">
                             <div class="quantity d-inline-block mr-2">
                                 <div class="pro-qty">Số lượng:
                                     <input type="number"  min="1"
-                                           name="quantity" value="{{$news->qty}}">
+                                           name="quantity" value="{{number_format($news->qty)}}">
                                 </div>
                             </div>
-                            <a href="/add/{{$news->id}}" class="primary-btn">Thêm vào giỏ hàng</a>
+                            <a href="/shopping/add?productId={{$obj->id}}&productQuantity=1"" class="primary-btn">Thêm vào giỏ hàng</a>
                         </div>
 
 
@@ -88,12 +85,12 @@
                         <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
                             <ul class="product__item__pic__hover">
                                 <li><a href="/productDetail/{{$obj->id}}"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="/add/{{$news->id}}"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><a href="/shopping/add?productId={{$obj->id}}&productQuantity=1"><i class="fa fa-shopping-cart"></i></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">{{$obj->name}}</a></h6>
+                            <h5>{{number_format($obj->price)}} VND</h5>
                         </div>
                     </div>
                 </div>

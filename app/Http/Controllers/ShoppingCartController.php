@@ -56,7 +56,7 @@ class ShoppingCartController extends Controller
 
     public function show() {
         $shoppingCart = Session::get('shoppingCart');
-        return view('shoppingCard.cardProduct', [
+        return view('client.cardProduct', [
             'shoppingCart'=>$shoppingCart
         ]);
     }
@@ -83,6 +83,7 @@ class ShoppingCartController extends Controller
         $order->shipName = $request->get('fullName');
         $order->shipPhone = $request->get('phone');
         $order->shipAddress = $request->get('address');
+        $order->email = $request->get('email');
         $order->note = $request->get('note');
         $order->isCheckout = false;
         $order->created_at = Carbon::now();

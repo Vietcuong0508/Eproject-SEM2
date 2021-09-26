@@ -19,5 +19,6 @@ class Product extends Model
         'gardenName',
         'nutrient',
         'vitamin',
+        'description',
     ];
 }

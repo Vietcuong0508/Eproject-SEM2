@@ -49,8 +49,6 @@ Route::put('/update-user/{id}', [AdminController::class, 'update']);
 Route::get('/edit-user/{id}', [AdminController::class, 'edit']);
 Route::delete('/destroy-user/{id}', [AdminController::class, 'destroy']);
 
-
-
 Route::get('/shopping-cart', [AddToCartController::class, 'index']);
 Route::get('/add/{id}',[AddToCartController::class,'add']);
 Route::get('/show',[AddToCartController::class,'show']);
@@ -71,3 +69,10 @@ Route::get('/about-us', function () {
 Route::get('/about-web', function () {
     return view('client/about-web');
 });
+
+Route::get('/shopping/add', [ShoppingCartController::class, 'add'])->name('add');
+Route::get('/shopping/cart', [ShoppingCartController::class, 'show']);
+Route::get('/shopping/remove', [ShoppingCartController::class, 'remove']);
+Route::post('/shopping/save', [ShoppingCartController::class, 'save']);
+Route::post('/shopping/order', [ShoppingCartController::class, 'create_payment']);
+
