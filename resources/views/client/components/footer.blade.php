@@ -45,7 +45,8 @@
                 <div class="footer__copyright">
                     <div class="footer__copyright__text"><p>
                             Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        </p></div>
+                        </p>
+                    </div>
                     <div class="footer__copyright__payment"><img src="/libs/client/img/xpayment-item.png.pagespeed.ic.fk3ziISga0.webp" alt=""></div>
                 </div>
             </div>

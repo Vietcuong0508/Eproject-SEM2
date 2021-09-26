@@ -11,4 +11,11 @@ class ContactController extends Controller
         $list = Contact::all();
         return view('/client/contact', ['list' => $list]);
     }
+
+    public function store(Request $request) {
+        $form = new Contact();
+        $form ->fill($request->all());
+        $form ->save();
+        return $form;
+    }
 }

@@ -121,6 +121,17 @@
             font-size: 12px;
         }
 
+        .selectpicker {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+        }
+
+        .search-product {
+            height: 30px;
+            /*margin-top: 25px;*/
+        }
+
     </style>
 @endsection
 @section('main-content')
@@ -147,6 +158,49 @@
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
+                            <h4>Lọc Theo</h4>
+                            <ul>
+                                <form action="" id="filter_form">
+                                    <select class="selectpicker form-control" id="price" name="price">
+                                        <option selected disabled hidden>Lọc theo giá</option>
+                                        <option value="1" {{$price && $price == 1 ? 'selected':''}}>0-20.000 VNĐ
+                                        </option>
+                                        <option value="2" {{$price && $price == 2 ? 'selected':''}}>20.000-50.000 VNĐ
+                                        </option>
+                                        <option value="3" {{$price && $price == 3 ? 'selected':''}}>50.000-100.000 VNĐ
+                                        </option>
+                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000 VNĐ
+                                        </option>
+                                    </select>
+                                    <select class="selectpicker form-control" id="category" name="category">
+                                        <option selected disabled hidden>Lọc danh mục</option>
+                                        <option value="1" {{$category && $category == 1 ? 'selected':''}}>Rau</option>
+                                        <option value="2" {{$category && $category == 2 ? 'selected':''}}>Củ</option>
+                                        <option value="3" {{$category && $category == 3 ? 'selected':''}}>Quả</option>
+                                    </select>
+                                    <select class="selectpicker form-control" id="gardenName" name="gardenName">
+                                        <option selected disabled hidden>Lọc theo nhà vườn</option>
+                                        <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại
+                                            rau hữu cơ Organik Đà
+                                            Lạt
+                                        </option>
+                                        <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại
+                                            hữu cơ BIOPHAP farm
+                                        </option>
+                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại
+                                            hữu cơ Viễn Phú
+                                        </option>
+                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ
+                                            phần Deli Fresh
+                                        </option>
+                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty
+                                            TNHH Lion Golden
+                                        </option>
+                                    </select>
+                                </form>
+                            </ul>
+                        </div>
+                        <div class="sidebar__item">
                             <div class="latest-product__text">
                                 <h4>Sản Phẩm Mới</h4>
                                 <div class="latest-product__slider owl-carousel">
@@ -157,7 +211,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[0] -> name}}</h6>
-                                                <span>{{$newProduct[0] -> price}}</span>
+                                                <span>{{number_format($newProduct[0] -> price)}} VND</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
@@ -167,7 +221,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[1] -> name}}</h6>
-                                                <span>{{$newProduct[1] -> price}}</span>
+                                                <span>{{number_format($newProduct[1] -> price)}} VND</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
@@ -177,7 +231,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[2] -> name}}</h6>
-                                                <span>{{$newProduct[2] -> price}}</span>
+                                                <span>{{number_format($newProduct[2] -> price)}} VND</span>
                                             </div>
                                         </a>
                                     </div>
@@ -189,7 +243,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[3] -> name}}</h6>
-                                                <span>{{$newProduct[3] -> price}}</span>
+                                                <span>{{number_format($newProduct[3] -> price)}} VND</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
@@ -199,7 +253,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[4] -> name}}</h6>
-                                                <span>{{$newProduct[4] -> price}}</span>
+                                                <span>{{number_format($newProduct[4] -> price)}} VND</span>
                                             </div>
                                         </a>
                                         <a href="#" class="latest-product__item">
@@ -209,7 +263,7 @@
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>{{$newProduct[5] -> name}}</h6>
-                                                <span>{{$newProduct[5] -> price}}</span>
+                                                <span>{{number_format($newProduct[5] -> price)}} VND</span>
                                             </div>
                                         </a>
                                     </div>
@@ -223,23 +277,26 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    <span>Sort By</span>
-                                    <select>
-                                        <option value="0">Default</option>
-                                        <option value="0">Default</option>
-                                    </select>
+                                    {{--                                    <span>Sort By</span>--}}
+                                    {{--                                    <select>--}}
+                                    {{--                                        <option value="0">Default</option>--}}
+                                    {{--                                        <option value="0">Default</option>--}}
+                                    {{--                                    </select>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
+                                    {{--                                    <h6><span>16</span> Products found</h6>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
-                                <div class="filter__option">
-                                    <span class="icon_grid-2x2"></span>
-                                    <span class="icon_ul"></span>
-                                </div>
+                                <form action="" id="filter_form">
+                                    <div class="row">
+                                        <input class="search-product" type="text" name="search" id="search"
+                                               placeholder="Tìm Kiếm">
+                                        <button type="submit" class="btn-success">Tìm Kiếm</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -249,14 +306,15 @@
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
                                         <ul class="product__item__pic__hover">
-                                            <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a></li>
+                                            <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
+                                            </li>
                                             <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">
                                         <h6>{{$obj->name}}</h6>
                                         <h6><a href="#">{{$obj->gardenName}}</a></h6>
-                                        <h5>{{$obj->price}}</h5>
+                                        <h5>{{number_format($obj->price)}} VND</h5>
                                     </div>
                                 </div>
                             </div>
@@ -286,5 +344,19 @@
         </div>
     </section>
 @endsection
+
 @section('custom-js')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $('#price').change(function () {
+                $('#filter_form').submit()
+            })
+            $('#gardenName').change(function () {
+                $('#filter_form').submit()
+            })
+            $('#category').change(function () {
+                $('#filter_form').submit()
+            })
+        })
+    </script>
 @endsection

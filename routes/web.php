@@ -23,9 +23,7 @@ Route::get('/admin', function () {
     return view('admin/dashboard');
 });
 
-Route::get('/', function () {
-    return view('client/home');
-})->name('index');
+Route::get('/', [ProductController::class, 'home'])->name('index');
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/create-products', [ProductController::class, 'create'])->name('create-products');
@@ -39,7 +37,7 @@ Route::get('/productDetail/{id}', [DetailController::class, 'show']);
 
 
 Route::get('/user', [AdminController::class, 'index']);
-Route::get('/register', [AdminController::class, 'getregister'])->name('register');
+Route::get('/register', [AdminController::class, 'getRegister'])->name('register');
 Route::post('/register', [AdminController::class, 'postRegister']);
 Route::get('/login', [AdminController::class, 'getLogin'])->name('login');
 Route::post('/login', [AdminController::class, 'postLogin']);
@@ -62,3 +60,4 @@ Route::get('/destroy',[AddToCartController::class,'destroy']);
 Route::get('/checkout', [CheckoutController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact-form', [ContactController::class, 'store']);

@@ -2,41 +2,46 @@
 <html lang="zxx">
 @include('client.components.head')
 <body>
+@section('custom-style')
+    <style>
+        .featured__item {
+            margin-bottom: 50px;
+            border: solid green 1px !important;
+            padding: 10px 10px;
+            border-radius: 10px;
+        }
+    </style>
+@endsection
 @include('.client.components.header')
 
-<section class="categories">
-    <div class="container">
-        <div class="row">
-            <div class="categories__slider owl-carousel">
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-1.jpg">
-                        <h5><a href="#">Fresh Fruit</a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-2.jpg">
-                        <h5><a href="#">Dried Fruit</a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-3.jpg">
-                        <h5><a href="#">Vegetables</a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-4.jpg">
-                        <h5><a href="#">drink fruits</a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-5.jpg">
-                        <h5><a href="#">drink fruits</a></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{--<section class="categories">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="categories__slider owl-carousel">--}}
+{{--                <div class="col-lg-3">--}}
+{{--                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-1.jpg">--}}
+{{--                        <h5><a href="#">Trái Cây Tươi</a></h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+{{--                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-3.jpg">--}}
+{{--                        <h5><a href="#">Rau</a></h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+{{--                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-4.jpg">--}}
+{{--                        <h5><a href="#">drink fruits</a></h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+{{--                    <div class="categories__item set-bg" data-setbg="/libs/client/img/categories/cat-5.jpg">--}}
+{{--                        <h5><a href="#">drink fruits</a></h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 
 <section class="featured spad">
     <div class="container">
@@ -56,126 +61,57 @@
             </div>
         </div>
         <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-1.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fruit fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-2.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
+            @foreach($rau as $obj)
+                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
+                                </li>
+                                <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">{{$obj->name}}</a></h6>
+                            <h5>{{$obj->price}}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fruit fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-3.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood fruit">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-4.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
+            @endforeach
+            @foreach($cu as $obj)
+                <div class="col-lg-3 col-md-4 col-sm-6 mix bulb">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
+                                </li>
+                                <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">{{$obj->name}}</a></h6>
+                            <h5>{{$obj->price}}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat fruit">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-5.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-6.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
+            @endforeach
+            @foreach($qua as $obj)
+                <div class="col-lg-3 col-md-4 col-sm-6 mix fruit">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="/productDetail/{{$obj->id}}"><i class="fas fa-info"></i></a>
+                                </li>
+                                <li><a href="/add/{{$obj->id}}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">{{$obj->name}}</a></h6>
+                            <h5>{{$obj->price}}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat fruit">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-7.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood fruit">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="/libs/client/img/featured/feature-8.jpg">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a href="#">Crab Pool Security</a></h6>
-                        <h5>$30.00</h5>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -190,58 +126,63 @@
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[0] -> thumbnail}}">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[0] -> name}}</h6>
+                                    <span>{{number_format($newProduct[0] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[1] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[1] -> name}}</h6>
+                                    <span>{{number_format($newProduct[1] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[2] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[2] -> name}}</h6>
+                                    <span>{{number_format($newProduct[2] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[3] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[3] -> name}}</h6>
+                                    <span>{{number_format($newProduct[3] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[4] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[4] -> name}}</h6>
+                                    <span>{{number_format($newProduct[4] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[5] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[5] -> name}}</h6>
+                                    <span>{{number_format($newProduct[5] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
@@ -255,58 +196,63 @@
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[82] -> thumbnail}}">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[82] -> name}}</h6>
+                                    <span>{{number_format($newProduct[82] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[23] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[23] -> name}}</h6>
+                                    <span>{{number_format($newProduct[23] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[86] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[86] -> name}}</h6>
+                                    <span>{{number_format($newProduct[86] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[75] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[75] -> name}}</h6>
+                                    <span>{{number_format($newProduct[75] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[68] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[68] -> name}}</h6>
+                                    <span>{{number_format($newProduct[68] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[8] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[8] -> name}}</h6>
+                                    <span>{{number_format($newProduct[8] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
@@ -315,63 +261,68 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="latest-product__text">
-                    <h4>Review Products</h4>
+                    <h4>Sản Phẩm Hot Nhất</h4>
                     <div class="latest-product__slider owl-carousel">
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[83] -> thumbnail}}">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[83] -> name}}</h6>
+                                    <span>{{number_format($newProduct[83] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[80] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[80] -> name}}</h6>
+                                    <span>{{number_format($newProduct[80] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[79] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[79] -> name}}</h6>
+                                    <span>{{number_format($newProduct[79] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
                         <div class="latest-prdouct__slider__item">
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-1.jpg.pagespeed.ic.dQgcajStX5.webp" alt="">
+                                    <img src="{{$newProduct[42] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[42] -> name}}</h6>
+                                    <span>{{number_format($newProduct[42] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-2.jpg.pagespeed.ic.NOJHmb0hZw.webp" alt="">
+                                    <img src="{{$newProduct[35] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[35] -> name}}</h6>
+                                    <span>{{number_format($newProduct[35] -> price)}} VND</span>
                                 </div>
                             </a>
                             <a href="#" class="latest-product__item">
                                 <div class="latest-product__item__pic">
-                                    <img src="/libs/client/img/latest-product/xlp-3.jpg.pagespeed.ic.eEz5Jo7-Qa.webp" alt="">
+                                    <img src="{{$newProduct[24] -> thumbnail}}"
+                                         alt="">
                                 </div>
                                 <div class="latest-product__item__text">
-                                    <h6>Crab Pool Security</h6>
-                                    <span>$30.00</span>
+                                    <h6>{{$newProduct[24] -> name}}</h6>
+                                    <span>{{number_format($newProduct[24] -> price)}} VND</span>
                                 </div>
                             </a>
                         </div>
