@@ -90,6 +90,7 @@
                             </div>
                             @else
                                 <ul>
+                                    <li><a href="{{route('login')}}"><i class="fa fa-user">&ensp;Đăng Nhập</i></a></li>
                                 </ul>
                             @endif
                         </div>

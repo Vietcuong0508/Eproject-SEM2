@@ -22,6 +22,24 @@
         </div>
     @endif
     <div class="container">
+        @if(session('storeAdmin'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong>{{session('storeAdmin')}}
+            </div>
+        @endif
+        @if(session('update'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong>{{session('update')}}
+            </div>
+        @endif
+        @if(session('destroy'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong>{{session('destroy')}}
+            </div>
+        @endif
         <table class="table mt-5">
             <thead>
             <tr>
