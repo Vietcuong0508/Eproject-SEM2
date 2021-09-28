@@ -27,11 +27,11 @@
 {{--            </li>--}}
             <li><a href="#">Nhà Vườn</a>
                 <ul class="header__menu__dropdown">
-                    <li><a href="/">Nhà Ông A</a></li>
-                    <li><a href="/">Nhà Ông B</a></li>
-                    <li><a href="/">Nhà Ông C</a></li>
-                    <li><a href="/">Nhà Ông D</a></li>
-                    <li><a href="/">Nhà Ông E</a></li>
+                    <li><a href="/garden/name1">Organik Đà Lạt</a></li>
+                    <li><a href="/garden/name2">BIOPHAP</a></li>
+                    <li><a href="/garden/name3">Viễn Phú</a></li>
+                    <li><a href="/garden/name4">Deli Fresh</a></li>
+                    <li><a href="/garden/name5">Lion Golden</a></li>
                 </ul>
             </li>
             <li><a href="/contact">Liên Hệ</a></li>
@@ -62,11 +62,11 @@
 {{--                        </li>--}}
                         <li><a href="#">Nhà Vườn</a>
                             <ul class="header__menu__dropdown">
-                                <li><a href="/">Nhà Ông A</a></li>
-                                <li><a href="/">Nhà Ông B</a></li>
-                                <li><a href="/">Nhà Ông C</a></li>
-                                <li><a href="/">Nhà Ông D</a></li>
-                                <li><a href="/">Nhà Ông E</a></li>
+                                <li><a href="/garden/name1">Organik Đà Lạt</a></li>
+                                <li><a href="/garden/name2">BIOPHAP</a></li>
+                                <li><a href="/garden/name3">Viễn Phú</a></li>
+                                <li><a href="/garden/name4">Deli Fresh</a></li>
+                                <li><a href="/garden/name5">Lion Golden</a></li>
                             </ul>
                         </li>
                         <li><a href="/contact">Liên Hệ</a></li>

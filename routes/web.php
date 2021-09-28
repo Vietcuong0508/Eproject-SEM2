@@ -5,8 +5,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DetailController;
+
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaypalController;
+
+use App\Http\Controllers\GardenNameController;
+
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Support\Facades\Route;
@@ -80,6 +84,13 @@ Route::get('/shopping/remove', [ShoppingCartController::class, 'remove']);
 Route::post('/shopping/save', [ShoppingCartController::class, 'save']);
 Route::post('/create-payment', [ShoppingCartController::class, 'create_payment']);
 
+
 Route::get('/admin/list-order', [OrderController::class, 'index']);
 Route::post('/admin/update_status', [OrderController::class, 'update_status'])->name('update_status');
 Route::get('/order/{id}', [OrderController::class, 'show']);
+
+Route::get('/garden/name1', [GardenNameController::class, 'garden1']);
+Route::get('/garden/name2', [GardenNameController::class, 'garden2']);
+Route::get('/garden/name3', [GardenNameController::class, 'garden3']);
+Route::get('/garden/name4', [GardenNameController::class, 'garden4']);
+Route::get('/garden/name5', [GardenNameController::class, 'garden5']);
