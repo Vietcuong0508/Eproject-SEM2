@@ -7,7 +7,7 @@
 
 @section('main-content')
 
-    /* code ở đây */
+    /* code ở đây . */
 
 @endsection
 
