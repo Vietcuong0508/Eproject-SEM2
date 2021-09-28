@@ -122,7 +122,7 @@
             <div class="col-lg-12">
                 <div class="hero__search">
                     <div class="hero__search__form">
-                        <form action="/products" id="filter_form">
+                        <form action="/products">
                             <input name="search" type="text" placeholder="Bạn cần tìm gì?">
                             <button type="submit" class="site-btn">Tìm Kiếm</button>
                         </form>

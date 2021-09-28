@@ -179,25 +179,6 @@
                                             <option value="2" {{$category && $category == 2 ? 'selected':''}}>Củ</option>
                                             <option value="3" {{$category && $category == 3 ? 'selected':''}}>Quả</option>
                                         </select>
-                                        <select class="selectpicker form-control" id="gardenName" name="gardenName">
-                                            <option selected disabled hidden>Lọc theo nhà vườn</option>
-                                            <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại
-                                                rau hữu cơ Organik Đà
-                                                Lạt
-                                            </option>
-                                            <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại
-                                                hữu cơ BIOPHAP farm
-                                            </option>
-                                            <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại
-                                                hữu cơ Viễn Phú
-                                            </option>
-                                            <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ
-                                                phần Deli Fresh
-                                            </option>
-                                            <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty
-                                                TNHH Lion Golden
-                                            </option>
-                                        </select>
                                     </form>
                                 </ul>
                             </div>
@@ -291,9 +272,9 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-3">
-                                    <form action="" id="filter_form">
+                                    <form action="">
                                         <div class="row">
-                                            <input class="search-product" type="text" name="search" id="search"
+                                            <input class="search-product" type="text" name="search"
                                                    placeholder="Tìm Kiếm">
                                             <button type="submit" class="btn-success">Tìm Kiếm</button>
                                         </div>
@@ -302,7 +283,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            @foreach($list as $obj)
+                            @foreach($garden as $obj)
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="product__item">
                                         <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">

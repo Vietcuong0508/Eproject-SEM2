@@ -12,14 +12,15 @@ class GardenNameController extends Controller
         $queryBuilder = Product::query();
         $search = $request->query('search');
         $price = $request->get('price');
-        $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
-        if ($search && strlen($search) > 0) {
+       if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
                 ->orWhere('nutrient', 'like', '%' . $search . '%');
+
         }
+        $garden = Product::query()->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt')->limit(21)->get();
+
         if ($price == 1) {
             $queryBuilder = $queryBuilder->whereBetween('price', [0, 20000]);
         }
@@ -31,22 +32,6 @@ class GardenNameController extends Controller
         }
         if ($price == 4) {
             $queryBuilder = $queryBuilder->where('price', '>', 100000);
-        }
-
-        if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
-        }
-        if ($gardenName == 2) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
-        }
-        if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
-        }
-        if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
-        }
-        if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
         }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
@@ -63,7 +48,7 @@ class GardenNameController extends Controller
             'list' => $events,
             'newProduct' => $newProduct,
             'price' => $price,
-            'gardenName' => $gardenName,
+            'garden' => $garden,
             'category' => $category
         ]);
     }
@@ -73,14 +58,14 @@ class GardenNameController extends Controller
         $queryBuilder = Product::query();
         $search = $request->query('search');
         $price = $request->get('price');
-        $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
                 ->orWhere('nutrient', 'like', '%' . $search . '%');
         }
+        $gardenName = Product::query()->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm')->limit(21)->get();
+
         if ($price == 1) {
             $queryBuilder = $queryBuilder->whereBetween('price', [0, 20000]);
         }
@@ -94,21 +79,6 @@ class GardenNameController extends Controller
             $queryBuilder = $queryBuilder->where('price', '>', 100000);
         }
 
-        if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
-        }
-        if ($gardenName == 2) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
-        }
-        if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
-        }
-        if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
-        }
-        if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
-        }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
         }
@@ -136,7 +106,7 @@ class GardenNameController extends Controller
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
+        $garden = Product::query()->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
@@ -153,22 +123,6 @@ class GardenNameController extends Controller
         }
         if ($price == 4) {
             $queryBuilder = $queryBuilder->where('price', '>', 100000);
-        }
-
-        if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
-        }
-        if ($gardenName == 2) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
-        }
-        if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
-        }
-        if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
-        }
-        if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
         }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
@@ -186,6 +140,7 @@ class GardenNameController extends Controller
             'newProduct' => $newProduct,
             'price' => $price,
             'gardenName' => $gardenName,
+            'garden' => $garden,
             'category' => $category
         ]);
     }
@@ -197,7 +152,7 @@ class GardenNameController extends Controller
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
+        $garden = Product::query()->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
@@ -216,21 +171,6 @@ class GardenNameController extends Controller
             $queryBuilder = $queryBuilder->where('price', '>', 100000);
         }
 
-        if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
-        }
-        if ($gardenName == 2) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
-        }
-        if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
-        }
-        if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
-        }
-        if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
-        }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
         }
@@ -247,6 +187,7 @@ class GardenNameController extends Controller
             'newProduct' => $newProduct,
             'price' => $price,
             'gardenName' => $gardenName,
+            'garden' => $garden,
             'category' => $category
         ]);
     }
@@ -256,14 +197,14 @@ class GardenNameController extends Controller
         $queryBuilder = Product::query();
         $search = $request->query('search');
         $price = $request->get('price');
-        $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
+        $garden = Product::query()->where('gardenName', 'like', 'Công Ty TNHH Lion Golden')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
                 ->orWhere('nutrient', 'like', '%' . $search . '%');
         }
+
         if ($price == 1) {
             $queryBuilder = $queryBuilder->whereBetween('price', [0, 20000]);
         }
@@ -277,21 +218,6 @@ class GardenNameController extends Controller
             $queryBuilder = $queryBuilder->where('price', '>', 100000);
         }
 
-        if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
-        }
-        if ($gardenName == 2) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
-        }
-        if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
-        }
-        if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
-        }
-        if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
-        }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
         }
@@ -307,7 +233,7 @@ class GardenNameController extends Controller
             'list' => $events,
             'newProduct' => $newProduct,
             'price' => $price,
-            'gardenName' => $gardenName,
+            'garden' => $garden,
             'category' => $category
         ]);
     }

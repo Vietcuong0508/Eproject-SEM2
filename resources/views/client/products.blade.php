@@ -290,7 +290,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
-                                <form action="" id="filter_form">
+                                <form action="">
                                     <div class="row">
                                         <input class="search-product" type="text" name="search" id="search"
                                                placeholder="Tìm Kiếm">
