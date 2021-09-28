@@ -18,6 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('note');
+            $table->integer('status')->default(\App\Enums\Contact::Chờ_Phản_Hồi);
             $table->timestamps();
         });
     }

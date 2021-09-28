@@ -5,21 +5,21 @@
 @endsection
 
 @section('main-content')
-    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Đăng Ký</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Trang Chủ</a>
-                            <span>Đăng Ký</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12 text-center">--}}
+{{--                    <div class="breadcrumb__text">--}}
+{{--                        <h2>Đăng Ký</h2>--}}
+{{--                        <div class="breadcrumb__option">--}}
+{{--                            <a href="/">Trang Chủ</a>--}}
+{{--                            <span>Đăng Ký</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section style="background-color: #eae9e9">
         <div class="container mt-4 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

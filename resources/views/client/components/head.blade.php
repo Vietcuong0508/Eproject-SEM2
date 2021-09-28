@@ -18,4 +18,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="/libs/client/css/index.css">
     @yield('custom-style')
+
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>

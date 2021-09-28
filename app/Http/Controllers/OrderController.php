@@ -12,18 +12,19 @@ class OrderController extends Controller
         $queryBuilder = Order::query();
         $search = $request->query('search');
         if ($search && strlen($search) > 0) {
-            $queryBuilder = $queryBuilder->where('shipName', 'like', '%' .$search. '%');
+            $queryBuilder = $queryBuilder->where('shipName', 'like', '%' . $search . '%');
         }
         $events = $queryBuilder->paginate(10)->appends(['search' => $search]);
-        return view('orders/list', [
+        return view('/admin/order/list', [
             'list' => $events,
         ]);
     }
 
 
-    public function show(Order $order)
+    public function show($id)
     {
-        //
+        $news = Order::where('id', '=', $id)->select('*')->first();
+        return view('/admin/order/order-detail', ['news' => $news]);
     }
 
 
@@ -31,7 +32,7 @@ class OrderController extends Controller
     {
         $detail = Order::find($id);
         return view('orders/edit', [
-            'edit'=>$detail
+            'edit' => $detail
         ]);
     }
 
@@ -51,8 +52,9 @@ class OrderController extends Controller
         return redirect('/admin/list');
     }
 
-    public function update_status(Request $request){
-        foreach (json_decode($request->array_id) as $item){
+    public function update_status(Request $request)
+    {
+        foreach (json_decode($request->array_id) as $item) {
             $order = Order::find($item);
             $order->status = $request->desire;
             $order->save();

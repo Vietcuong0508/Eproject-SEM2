@@ -21,4 +21,15 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/libs/admin/dist/js/pages/dashboard2.js"></script>
 
+<!-- data table JS
+       ============================================ -->
+<script src="/libs/admin/dist/js/data-table/bootstrap-table.js"></script>
+<script src="/libs/admin/dist/js/data-table/tableExport.js"></script>
+<script src="/libs/admin/dist/js/data-table/data-table-active.js"></script>
+<script src="/libs/admin/dist/js/data-table/bootstrap-table-editable.js"></script>
+<script src="/libs/admin/dist/js/data-table/bootstrap-editable.js"></script>
+<script src="/libs/admin/dist/js/data-table/bootstrap-table-resizable.js"></script>
+<script src="/libs/admin/dist/js/data-table/colResizable-1.5.source.js"></script>
+<script src="/libs/admin/dist/js/data-table/bootstrap-table-export.js"></script>
+
 @yield('custom-js')

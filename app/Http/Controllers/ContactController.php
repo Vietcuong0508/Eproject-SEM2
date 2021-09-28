@@ -7,15 +7,36 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function index() {
-        $list = Contact::all();
-        return view('/client/contact', ['list' => $list]);
+    public function index(Request $request)
+    {
+        $queryBuilder = Contact::query();
+        $search = $request->query('search');
+        $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
+        return view('admin/contact', [
+            'list' => $events
+        ]);
     }
 
-    public function store(Request $request) {
+    public function create()
+    {
+        return view('/client/contact');
+    }
+
+    public function store(Request $request)
+    {
         $form = new Contact();
-        $form ->fill($request->all());
-        $form ->save();
-        return $form;
+        $form->fill($request->all());
+        $form->save();
+        return redirect('admin/contact');
+    }
+
+    public function update_status(Request $request)
+    {
+        foreach (json_decode($request->array_id) as $item) {
+            $order = Contact::find($item);
+            $order->status = $request->desire;
+            $order->save();
+        }
+        return back();
     }
 }

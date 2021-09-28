@@ -5,21 +5,21 @@
 @endsection
 @section('main-content')
 
-    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Product Details</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Home</a>
-                            <span>Product Details</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12 text-center">--}}
+{{--                    <div class="breadcrumb__text">--}}
+{{--                        <h2>Product Details</h2>--}}
+{{--                        <div class="breadcrumb__option">--}}
+{{--                            <a href="/">Home</a>--}}
+{{--                            <span>Product Details</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="product-details spad">
         <div class="container">
