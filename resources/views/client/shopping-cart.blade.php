@@ -6,21 +6,21 @@
 @endsection
 
 @section('main-content')
-    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Sản Phẩm</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Trang Chủ</a>
-                            <span>Giỏ Hàng</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12 text-center">--}}
+{{--                    <div class="breadcrumb__text">--}}
+{{--                        <h2>Sản Phẩm</h2>--}}
+{{--                        <div class="breadcrumb__option">--}}
+{{--                            <a href="/">Trang Chủ</a>--}}
+{{--                            <span>Giỏ Hàng</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class=" pb-5">
         <div class="container-fluid">
             <div class="row">
@@ -79,7 +79,7 @@
                                             <td><input style="outline: none; width: 150px" type="number" min="1"
                                                        name="productQuantity"
                                                        value="{{$products->quantity}}"></td>
-                                            <td>{{$products->quantity * $products->price}}</td>
+                                            <td>{{number_format($products->quantity * $products->price)}} VNĐ</td>
                                             <td class="actions">
                                                 <div class="text-right">
                                                     <button class="btn btn-primary btn-md mb-2">
@@ -136,7 +136,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>Email<span>*</span></p>
+                                        <p>Email<span></span></p>
                                         <input type="text" name="email">
                                     </div>
                                 </div>

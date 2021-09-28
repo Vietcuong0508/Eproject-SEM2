@@ -4,7 +4,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__about__logo">
-                        <a href="/"><img src="/libs/client/img/logo/img_1.png"></a>
+                        <a href="/"><img src="/libs/client/img/logo/logo-1.png"></a>
                     </div>
                     <ul>
                         <li>Address: 8 Tôn Thất Thuyết, Mỹ Đình, Cầu Giấy, Hà Nội, Vietnam</li>
@@ -40,16 +40,16 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="footer__copyright">
-                    <div class="footer__copyright__text"><p>
-                            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        </p>
-                    </div>
-                    <div class="footer__copyright__payment"><img src="/libs/client/img/xpayment-item.png.pagespeed.ic.fk3ziISga0.webp" alt=""></div>
-                </div>
-            </div>
-        </div>
+{{--        <div class="row">--}}
+{{--            <div class="col-lg-12">--}}
+{{--                <div class="footer__copyright">--}}
+{{--                    <div class="footer__copyright__text"><p>--}}
+{{--                            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                    <div class="footer__copyright__payment"><img src="/libs/client/img/xpayment-item.png.pagespeed.ic.fk3ziISga0.webp" alt=""></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 </footer>

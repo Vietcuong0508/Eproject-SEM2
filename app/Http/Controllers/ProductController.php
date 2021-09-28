@@ -8,15 +8,16 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+//$newProduct = Product::query()->orderBy('id', 'DESC')->take(6)->get();
 
     public function index(Request $request)
     {
         $queryBuilder = Product::query();
-        $search = $request->query('search');
+        $newProduct = Product::query()->orderBy('id', 'DESC')->take(6)->get();
+        $search = $request->get('search');
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 -> orWhere('vitamin', 'like', '%' . $search . '%')
@@ -60,13 +61,12 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('category', '=', 3);
         }
         $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
-        $newProduct = Product::query()->orderBy('id', 'DESC')->take(6)->get();
         return view('client/products', [
             'list' => $events,
-            'newProduct' => $newProduct,
             'price' => $price,
             'gardenName' => $gardenName,
-            'category' => $category
+            'category' => $category,
+            'newProduct' => $newProduct
         ]);
     }
 
@@ -114,7 +114,7 @@ class ProductController extends Controller
     public function list(Request $request)
     {
         $queryBuilder = Product::query();
-        $search = $request->get('search');
+        $search = $request->query('search');
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
@@ -189,7 +189,7 @@ class ProductController extends Controller
         $product->fill($request->all());
         $request->validated();
         $product->save();
-        return redirect('/list-products')->with('store','Thêm mới sản phẩm thành công');;
+        return redirect('/list-products')->with('store','Thêm mới sản phẩm thành công');
     }
 
     public function edit($id)

@@ -1,11 +1,11 @@
-<div id="preloder">
-    <div class="loader"></div>
-</div>
+{{--<div id="preloder">--}}
+{{--    <div class="loader"></div>--}}
+{{--</div>--}}
 
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="#"><img src="/libs/client/img/logo/img.png"></a>
+        <a href="#"><img src="/libs/client/img/logo/logo.png"></a>
     </div>
     <div class="humberger__menu__widget">
         <div class="header__top__right__language">
@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="/"><img src="/libs/client/img/logo/img.png"></a>
+                    <a href="/"><img src="/libs/client/img/logo/logo.png"></a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -140,10 +140,10 @@
                 </div>
                 <div class="hero__item set-bg" data-setbg="/libs/client/img/hero/img.png">
                     <div class="hero__text">
-                        <span>FRUIT FRESH</span>
-                        <h2>Vegetable <br/>100% Organic</h2>
-                        <p>Free Pickup and Delivery Available</p>
-                        <a href="#" class="primary-btn">SHOP NOW</a>
+                            <span>Rau Sạch</span>
+                        <h2>Rau quả<br/>100% hữu cơ</h2>
+                        <p>Nhận và giao hàng miễn phí</p>
+                        <a href="/product" class="primary-btn">Mua Ngay</a>
                     </div>
                 </div>
             </div>

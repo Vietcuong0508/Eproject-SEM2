@@ -128,7 +128,7 @@
         }
 
         .search-product {
-            height: 30px;
+            height: 26px;
             /*margin-top: 25px;*/
         }
 
@@ -136,21 +136,21 @@
 @endsection
 @section('main-content')
 
-    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Sản Phẩm</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Trang Chủ</a>
-                            <span>Sản Phẩm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12 text-center">--}}
+{{--                    <div class="breadcrumb__text">--}}
+{{--                        <h2>Sản Phẩm</h2>--}}
+{{--                        <div class="breadcrumb__option">--}}
+{{--                            <a href="/">Trang Chủ</a>--}}
+{{--                            <span>Sản Phẩm</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="product spad">
         <div class="container">
@@ -163,14 +163,10 @@
                                 <form action="" id="filter_form">
                                     <select class="selectpicker form-control" id="price" name="price">
                                         <option selected disabled hidden>Lọc theo giá</option>
-                                        <option value="1" {{$price && $price == 1 ? 'selected':''}}>0-20.000 VNĐ
-                                        </option>
-                                        <option value="2" {{$price && $price == 2 ? 'selected':''}}>20.000-50.000 VNĐ
-                                        </option>
-                                        <option value="3" {{$price && $price == 3 ? 'selected':''}}>50.000-100.000 VNĐ
-                                        </option>
-                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000 VNĐ
-                                        </option>
+                                        <option value="1" {{$price && $price == 1 ? 'selected':''}}>0-20.000 VNĐ</option>
+                                        <option value="2" {{$price && $price == 2 ? 'selected':''}}>20.000-50.000 VNĐ</option>
+                                        <option value="3" {{$price && $price == 3 ? 'selected':''}}>50.000-100.000 VNĐ</option>
+                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000 VNĐ</option>
                                     </select>
                                     <select class="selectpicker form-control" id="category" name="category">
                                         <option selected disabled hidden>Lọc danh mục</option>
@@ -180,21 +176,15 @@
                                     </select>
                                     <select class="selectpicker form-control" id="gardenName" name="gardenName">
                                         <option selected disabled hidden>Lọc theo nhà vườn</option>
-                                        <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại
-                                            rau hữu cơ Organik Đà
-                                            Lạt
+                                        <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại rau hữu cơ Organik Đà Lạt
                                         </option>
-                                        <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại
-                                            hữu cơ BIOPHAP farm
+                                        <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại hữu cơ BIOPHAP farm
                                         </option>
-                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại
-                                            hữu cơ Viễn Phú
+                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại hữu cơ Viễn Phú
                                         </option>
-                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ
-                                            phần Deli Fresh
+                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ phần Deli Fresh
                                         </option>
-                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty
-                                            TNHH Lion Golden
+                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty TNHH Lion Golden
                                         </option>
                                     </select>
                                 </form>
@@ -277,21 +267,15 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
-                                    {{--                                    <span>Sort By</span>--}}
-                                    {{--                                    <select>--}}
-                                    {{--                                        <option value="0">Default</option>--}}
-                                    {{--                                        <option value="0">Default</option>--}}
-                                    {{--                                    </select>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
-                                    {{--                                    <h6><span>16</span> Products found</h6>--}}
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-3">
                                 <form action="">
-                                    <div class="row">
+                                    <div class="filter__option">
                                         <input class="search-product" type="text" name="search" id="search"
                                                placeholder="Tìm Kiếm">
                                         <button type="submit" class="btn-success">Tìm Kiếm</button>
