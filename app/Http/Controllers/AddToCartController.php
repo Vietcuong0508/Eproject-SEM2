@@ -75,7 +75,8 @@ class AddToCartController extends Controller
             $order_detail->save();
             $this->delete_cart($item->id);
         }
-        return view('/admin/order/list');
+        return view('/admin/order/list', [ 'list' => $product
+        ]);
     }
 
     public function delete_cart($id)

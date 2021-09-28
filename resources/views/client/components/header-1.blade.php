@@ -1,11 +1,11 @@
-<div id="preloder">
-    <div class="loader"></div>
-</div>
+{{--<div id="preloder">--}}
+{{--    <div class="loader"></div>--}}
+{{--</div>--}}
 
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="#"><img src="/libs/client/img/logo/img.png"></a>
+        <a href="#"><img src="/libs/client/img/logo/logo.png"></a>
     </div>
     <div class="humberger__menu__widget">
         <div class="header__top__right__language">
@@ -45,7 +45,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="/"><img src="/libs/client/img/logo/img.png"></a>
+                    <a href="/"><img src="/libs/client/img/logo/logo.png"></a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -122,7 +122,7 @@
             <div class="col-lg-12">
                 <div class="hero__search">
                     <div class="hero__search__form">
-                        <form action="/products" id="filter_form">
+                        <form action="/products">
                             <input name="search" type="text" placeholder="Bạn cần tìm gì?">
                             <button type="submit" class="site-btn">Tìm Kiếm</button>
                         </form>

@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaypalController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Support\Facades\Route;
@@ -59,8 +61,10 @@ Route::post('/shopping/order', [AddToCartController::class, 'create_payment']);
 
 Route::get('/checkout', [CheckoutController::class, 'index']);
 
-Route::get('/contact', [ContactController::class, 'index']);
-Route::get('/contact-form', [ContactController::class, 'store']);
+Route::get('/contact', [ContactController::class, 'create']);
+Route::post('/contact', [ContactController::class, 'store']);
+Route::get('/admin/contact', [ContactController::class, 'index']);
+Route::post('/admin/contact_status', [ContactController::class, 'update_status'])->name('contact_status');
 
 Route::get('/about-us', function () {
     return view('client/about-us');
@@ -74,5 +78,8 @@ Route::get('/shopping/add', [ShoppingCartController::class, 'add'])->name('add')
 Route::get('/shopping/cart', [ShoppingCartController::class, 'show']);
 Route::get('/shopping/remove', [ShoppingCartController::class, 'remove']);
 Route::post('/shopping/save', [ShoppingCartController::class, 'save']);
-Route::post('/shopping/order', [ShoppingCartController::class, 'create_payment']);
+Route::post('/create-payment', [ShoppingCartController::class, 'create_payment']);
 
+Route::get('/admin/list-order', [OrderController::class, 'index']);
+Route::post('/admin/update_status', [OrderController::class, 'update_status'])->name('update_status');
+Route::get('/order/{id}', [OrderController::class, 'show']);
