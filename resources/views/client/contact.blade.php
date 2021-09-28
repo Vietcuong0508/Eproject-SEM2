@@ -86,7 +86,7 @@
                 </div>
             </div>
             <form action="#">
-                <div class="row">
+                <div class="row" style="margin: 0 150px">
                     <div class="col-lg-6 col-md-6">
                         <input type="text" placeholder="Tên Của Bạn" name="name">
                     </div>

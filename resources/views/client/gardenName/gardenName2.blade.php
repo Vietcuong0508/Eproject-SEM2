@@ -1,4 +1,4 @@
-@section('title', 'Sản Phẩm')
+@section('title', 'Nhà vườn')
 @extends('client.layouts.master-1')
 @section('custom-style')
 

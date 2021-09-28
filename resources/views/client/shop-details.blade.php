@@ -57,7 +57,7 @@
                                            name="quantity" value="{{number_format($news->qty)}}">
                                 </div>
                             </div>
-                            <a href="/shopping/add?productId={{$obj->id}}&productQuantity=1"" class="primary-btn">Thêm vào giỏ hàng</a>
+                            <a href="/shopping/add?productId={{$news->id}}&productQuantity=1"" class="primary-btn">Thêm vào giỏ hàng</a>
                         </div>
 
 

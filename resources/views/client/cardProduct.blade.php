@@ -1,24 +1,9 @@
-@section('title', 'Sản Phẩm')
+@section('title', 'Giỏ Hàng')
 @extends('client.layouts.master-1')
 @section('custom-style')
 @endsection
 
 @section('main-content')
-    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Giỏ hàng</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Trang Chủ</a>
-                            <span>Giỏ Hàng</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <div class="container-fluid h-100">
         <div class="row">
             <div class="col-12">
@@ -73,7 +58,7 @@
                                         <td><input style="outline: none; width: 100px" type="number" min="1"
                                                    name="productQuantity"
                                                    value="{{$products->quantity}}"></td>
-                                        <td>{{$products->quantity * $products->price}}</td>
+                                        <td>{{number_format($products->quantity * $products->price)}} VND</td>
 
                                         <td class="actions">
                                             <div>
