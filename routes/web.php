@@ -13,6 +13,7 @@ use App\Http\Controllers\GardenNameController;
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShoppingCartController;
+use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,35 +26,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/admin', function () {
-    return view('admin/dashboard');
+Route::prefix('admin')->middleware(['auth', CheckAdmin::class])->group(function (){
+    require_once __DIR__ . '/admin.php';
 });
 
+
+
 Route::get('/', [ProductController::class, 'home'])->name('index');
-
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/create-products', [ProductController::class, 'create'])->name('create-products');
-Route::post('/create-products', [ProductController::class, 'store']);
-Route::get('/list-products', [ProductController::class, 'list'])->name('list-product');
-Route::get('/new-products', [ProductController::class, 'newProduct'])->name('new-product');
-Route::put('/update-products/{id}', [ProductController::class, 'update']);
-Route::get('/edit-products/{id}', [ProductController::class, 'edit']);
-Route::delete('/destroy-products/{id}', [ProductController::class, 'destroy']);
-Route::get('/productDetail/{id}', [DetailController::class, 'show']);
 
-
-Route::get('/user', [AdminController::class, 'index']);
 Route::get('/register', [AdminController::class, 'getRegister'])->name('register');
 Route::post('/register', [AdminController::class, 'postRegister']);
 Route::get('/login', [AdminController::class, 'getLogin']);
 Route::post('/login', [AdminController::class, 'postLogin'])->name('login');
 Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
-Route::get('/create-user', [AdminController::class, 'create'])->name('create-user');
-Route::post('/create-user', [AdminController::class, 'storeAdmin']);
-Route::put('/update-user/{id}', [AdminController::class, 'update']);
-Route::get('/edit-user/{id}', [AdminController::class, 'edit']);
-Route::delete('/destroy-user/{id}', [AdminController::class, 'destroy']);
 
 Route::get('/shopping-cart', [AddToCartController::class, 'index']);
 Route::get('/add/{id}',[AddToCartController::class,'add']);
@@ -67,8 +53,7 @@ Route::get('/checkout', [CheckoutController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'create']);
 Route::post('/contact', [ContactController::class, 'store']);
-Route::get('/admin/contact', [ContactController::class, 'index']);
-Route::post('/admin/contact_status', [ContactController::class, 'update_status'])->name('contact_status');
+
 
 Route::get('/about-us', function () {
     return view('client/about-us');
@@ -85,9 +70,7 @@ Route::post('/shopping/save', [ShoppingCartController::class, 'save']);
 Route::post('/create-payment', [ShoppingCartController::class, 'create_payment']);
 
 
-Route::get('/admin/list-order', [OrderController::class, 'index']);
-Route::post('/admin/update_status', [OrderController::class, 'update_status'])->name('update_status');
-Route::get('/order/{id}', [OrderController::class, 'show']);
+
 
 Route::get('/garden/name1', [GardenNameController::class, 'garden1']);
 Route::get('/garden/name2', [GardenNameController::class, 'garden2']);

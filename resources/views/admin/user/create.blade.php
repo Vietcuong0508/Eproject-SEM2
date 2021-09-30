@@ -12,7 +12,7 @@
                 <div class="col">
                     <div class="card card-registration my-4">
                         <div class="col-xl-12">
-                            <form action="/create-user" method="post">
+                            <form action="{{route('create-user')}}" method="post">
                                 @csrf
                                 <div class="card-body p-md-5 text-black">
                                     <h3 class="mb-3 text-uppercase">Đăng Kí</h3>
@@ -94,10 +94,9 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label">Quyền Hạn</label>
-                                                <select name="permission" class="form-control border-success">
-                                                    @foreach(App\Enums\Role::getValues() as $type)
-                                                        <option value="{{$type}}">{{App\Enums\Role::getDescription($type)}}</option>
-                                                    @endforeach
+                                                <select name="role" class="form-control border-success">
+                                                    <option value="{{\App\Enums\Role::ADMIN}}">Admin</option>
+                                                    <option value="{{\App\Enums\Role::USER}}">User</option>
                                                 </select>
                                             </div>
                                         </div>

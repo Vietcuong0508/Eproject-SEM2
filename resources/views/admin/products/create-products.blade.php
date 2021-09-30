@@ -12,7 +12,7 @@
                 <div class="col">
                     <div class="card card-registration my-4">
                         <div class="col-xl-12">
-                            <form action="/create-products" method="post">
+                            <form action="{{route('create-products')}}" method="post">
                                 @csrf
                                 <div class="card-body p-md-5 text-black">
                                     <h3 class="mb-3 text-uppercase">Thêm Mới Sản Phẩm</h3>
@@ -110,6 +110,15 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label">Vitamin</label>
                                         <input type="text" class="form-control border-success" name="vitamin"
+                                               placeholder="">
+                                        @error('vitamin')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label">Description</label>
+                                        <input type="text" class="form-control border-success" name="description"
                                                placeholder="">
                                         @error('vitamin')
                                         <div class="text-danger">* {{ $message }}</div>

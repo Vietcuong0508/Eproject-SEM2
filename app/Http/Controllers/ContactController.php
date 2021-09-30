@@ -27,7 +27,7 @@ class ContactController extends Controller
         $form = new Contact();
         $form->fill($request->all());
         $form->save();
-        return redirect('admin/contact');
+        return redirect()->route('contact');
     }
 
     public function update_status(Request $request)
