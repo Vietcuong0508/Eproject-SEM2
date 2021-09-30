@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
 use App\Models\AddToCart;
 use App\Models\Order;
 use App\Models\OrderDetail;
@@ -52,10 +53,10 @@ class AddToCartController extends Controller
         return redirect('/show')->with('destroy', 'Xóa tất cả sản phẩm khỏi giỏ hàng thành công');
     }
 
-    public function create_payment(Request $request)
+    public function create_payment(OrderRequest $request)
     {
+        $request->validated();
         $shopping_cart = Session::get('shoppingCart');
-
         $order = new Order();
         $order->fill($request->all());
         $amount = 0;

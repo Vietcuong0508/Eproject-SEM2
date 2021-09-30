@@ -24,14 +24,14 @@ class FormProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'min:3'],
+            'name' => ['required'],
             'thumbnail' => ['required'],
             'gardenName' => ['required', 'min:5'],
             'category' => ['required'],
             'weight' =>  ['required'],
-            'vitamin' =>  ['required', 'min:3'],
-            'nutrient' =>  ['required', 'min:3'],
-            'price' =>  ['numeric', 'required', 'min:2'],
+            'vitamin' =>  ['required'],
+            'nutrient' =>  ['required'],
+            'price' =>  ['numeric', 'required'],
         ];
     }
 
@@ -46,12 +46,7 @@ class FormProductRequest extends FormRequest
             'vitamin.required' => 'Vui lòng nhập vitamin sản phẩm',
             'nutrient.required' => 'Vui lòng nhập chất ding dưỡng sản phẩm',
             'price.required' => 'Vui lòng nhập giá sản phẩm',
-            'name.min' => 'Tên sản phẩm tối thiểu 3 ký tự',
             'gardenName.min' => 'Tên nhà vườn tối thiểu 5 ký tự',
-            'vitamin.min' => 'Vitamin tối thiểu 3 ký tự',
-            'nutrient.min' => 'Chất dinh dưỡng tối thiểu 4 ký tự',
-            'price.min' => 'Giá sản phẩm tối thiểu 4 ký tự',
-            'price.numeric' => 'Giá sản phẩm phải là số',
         ];
     }
 }
