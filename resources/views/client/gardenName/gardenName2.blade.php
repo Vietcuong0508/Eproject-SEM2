@@ -139,9 +139,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="hero__item__garden garden-name2">
-                    <div class="hero__text garden">
+                    <div class="garden">
                         <span>RAU SẠCH</span>
-                        <h2>Trang trại <br/> hữu cơ BIOPHAP</h2>
+                        <h1>Trang trại <br/> hữu cơ BIOPHAP</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>

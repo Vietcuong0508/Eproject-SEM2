@@ -51,9 +51,7 @@
                                             <input type="text" class="form-control border-success py-2" name="username"
                                                    placeholder=" ">
                                         </div>
-                                        @error('username')
-                                        <div class="text-danger">* {{ $message }}</div>
-                                        @enderror
+
 
                                         <label class="form-label mt-2">Mật khẩu</label>
                                         <div class="input-group form-group">
@@ -63,9 +61,6 @@
                                             <input type="password" class="form-control border-success" name="password"
                                                    placeholder=" ">
                                         </div>
-                                        @error('password')
-                                        <div class="text-danger">* {{ $message }}</div>
-                                        @enderror
                                         <div class="row justify-content-center px-3"> <button type="submit" class="btn-block btn-submit">Submit form</button> </div>
                                         <div class="row justify-content-center my-2"> <a href="#" class="text-muted">Forgot Password?</a> </div>
                                         <div class="bottom text-center mb-5">

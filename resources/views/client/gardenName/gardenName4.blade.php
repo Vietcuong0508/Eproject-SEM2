@@ -139,9 +139,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="hero__item__garden garden-name4" data-setbg="/libs/client/img/garden-3.jpg">
-                    <div class="hero__text garden">
+                    <div class=" garden">
                         <span>RAU SẠCH</span>
-                        <h2>Công ty<br/>cổ phần Deli Fresh</h2>
+                        <h1>Công ty<br/>cổ phần Deli Fresh</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>
