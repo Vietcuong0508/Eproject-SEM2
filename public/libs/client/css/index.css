@@ -3777,7 +3777,7 @@ ul, ol {
 
 .header__cart {
     text-align: center;
-    padding: 20px 0
+    padding: 28px 0
 }
 
 .header__cart ul {
@@ -4019,8 +4019,8 @@ ul, ol {
 }
 
 .garden {
-    background-color: #b2d553;
-    padding: 66px 52px;
+    background-color: #ecffc7;
+    padding: 45px 52px;
     border-radius: 0 135px 135px 0;
     color: white;
 }

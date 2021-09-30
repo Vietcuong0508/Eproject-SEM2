@@ -42,7 +42,8 @@ class AdminController extends Controller
             ->with('success', 'Đăng kí thành công');
     }
 
-    public function postLogin(Request $request) {
+    public function postLogin(FormUserRequest $request) {
+        $request->validated();
         $arr = [
             'username' => $request->username,
             'password' => $request->password
