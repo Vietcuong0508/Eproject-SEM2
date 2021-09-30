@@ -11,7 +11,7 @@
             border-color: #6c757d;
             width: 113px;
             height: 20px;
-            margin-left: 300px;
+            margin-left: 250px;
         }
         .btn-success {
             height: 25px;
@@ -69,15 +69,15 @@
             </select>
             <select class="selectpicker" id="gardenName" name="gardenName">
                 <option selected disabled hidden>Lọc theo nhà vườn</option>
-                <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại rau hữu cơ Organik Đà Lạt
+                <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Vườn rau, trái cây sạch bà Họa
                 </option>
-                <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại hữu cơ BIOPHAP farm
+                <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Rau sạch Minh Hiệp
                 </option>
-                <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Đồng Xanh Farm
+                <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nhà Vườn Duy Quang
                 </option>
-                <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Univers Farm Organics
+                <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Nhà Vườn Quang Huy
                 </option>
-                <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Trang trại hữu cơ Organica
+                <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Nhà Vườn Tiến Dũng
                 </option>
             </select>
                 <input class="search-admin" type="text" name="search" id="search" placeholder="search">

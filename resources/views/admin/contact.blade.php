@@ -58,7 +58,7 @@
                                         @if ($list->lastPage() > 1)
                                             <ul class="pagination">
                                                 <li class="{{ ($list->currentPage() == 1) ? ' disabled' : '' }}">
-                                                    <a href="{{ $list->url(1) }}">Previous</a>
+                                                    <a href="{{ $list->url(1) }}">Trước</a>
                                                 </li>
                                                 @for ($i = 1; $i <= $list->lastPage(); $i++)
                                                     <li class="{{ ($list->currentPage() == $i) ? ' active' : '' }}">
@@ -66,21 +66,21 @@
                                                     </li>
                                                 @endfor
                                                 <li class="{{ ($list->currentPage() == $list->lastPage()) ? ' disabled' : '' }}">
-                                                    <a href="{{ $list->url($list->currentPage()+1) }}">Next</a>
+                                                    <a href="{{ $list->url($list->currentPage()+1) }}">Sau</a>
                                                 </li>
                                             </ul>
                                         @endif
                                     </div>
                                     <div class="col-6">
                                         <div style="position: absolute;bottom: 20px">
-                                        <span style="margin-right: 30px">Check all <input id="check_all" type="checkbox"
+                                        <span style="margin-right: 30px">Đánh dấu tất cả <input id="check_all" type="checkbox"
                                                                                           style="transform: translateY(2px)"></span>
-                                            <select name="contact_status" id="contact_status" style="width: 130px;height: 32px">
-                                                <option hidden>Change status</option>
+                                            <select name="contact_status" id="contact_status" style="width: 170px;height: 32px">
+                                                <option hidden>Thay Đổi Trạng Thái</option>
                                                 <option value="{{\App\Enums\Contact::Chờ_Phản_Hồi}}">Chờ Phản Hồi</option>
                                                 <option value="{{\App\Enums\Contact::Đã_Phản_Hồi}}">Đã Phản Hồi</option>
                                             </select>
-                                            <button class="btn btn-primary btn_submit" style="width: 120px">Apply
+                                            <button class="btn btn-primary btn_submit" style="width: 120px">Xác Nhận
                                             </button>
                                             <form action="{{route('contact_status')}}" id="form_update_status"
                                                   method="post"

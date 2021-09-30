@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>1,
                 'name'=>'Rau Cải Ngọt',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>23100,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -35,7 +35,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>2,
                 'name'=>'Rau Mồng Tơi',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>28200,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -49,7 +49,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>3,
                 'name'=>'Su Su',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>16400,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -63,7 +63,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>4,
                 'name'=>'Bí Đỏ',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>11900,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -78,7 +78,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>5,
                 'name'=>'Khoai Tây',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>25000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -92,7 +92,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>6,
                 'name'=>'Măng',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>28200,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>7,
                 'name'=>'Bắp Cải',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>25000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -120,7 +120,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>8,
                 'name'=>'Rau Muống',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>33900,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -134,7 +134,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>9,
                 'name'=>'Khoai Lang',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>28500,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -148,7 +148,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>10,
                 'name'=>'Rau Mùi',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>42900,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -162,7 +162,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>11,
                 'name'=>'Dưa Chuột',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>38300,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -176,7 +176,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>12,
                 'name'=>'Bí Đao',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>20300,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -190,7 +190,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>13,
                 'name'=>'Rau Cải Thìa',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>39400,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -204,7 +204,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>14,
                 'name'=>'Cam',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>43900,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -218,7 +218,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>15,
                 'name'=>'Chuối',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>19500,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -232,7 +232,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>16,
                 'name'=>'Khế',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>62500,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -246,7 +246,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>17,
                 'name'=>'Đào',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -260,7 +260,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>18,
                 'name'=>'Tỏi',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>32000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -274,7 +274,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>19,
                 'name'=>'Me',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>53900,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -288,7 +288,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>20,
                 'name'=>'Bưởi',
-                'gardenName'=>'Trang trại hữu cơ Organik Đà Lạt',
+                'gardenName'=>'Vườn rau, trái cây sạch bà Họa',
                 'price'=>60000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -302,7 +302,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>21,
                 'name'=>'Atiso',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>80000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -316,7 +316,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>22,
                 'name'=>'Cần Tây',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -330,7 +330,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>23,
                 'name'=>'Thì Là',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>80000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -344,7 +344,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>24,
                 'name'=>'Nấm',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>130000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -358,7 +358,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>25,
                 'name'=>'Ớt Chuông',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>61000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -372,7 +372,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>26,
                 'name'=>'Ớt Cay',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>80000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -386,7 +386,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>27,
                 'name'=>'Cải Xoong',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -400,7 +400,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>28,
                 'name'=>'Khoai Mỡ',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>47000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -414,7 +414,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>29,
                 'name'=>'Sắn',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -428,7 +428,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>30,
                 'name'=>'Bạc Hà',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>10000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -442,7 +442,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>31,
                 'name'=>'Củ Sen',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>50000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -456,7 +456,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>32,
                 'name'=>'Nghệ',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>600000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -470,7 +470,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>33,
                 'name'=>'Su Hào',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>10000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -484,7 +484,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>34,
                 'name'=>'Rau Răm',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -498,7 +498,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>35,
                 'name'=>'Rau Má',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -512,7 +512,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>36,
                 'name'=>'Cải Đắng',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>13000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -526,7 +526,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>37,
                 'name'=>'Rong Biển',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>100000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -540,7 +540,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>38,
                 'name'=>'Đậu Đũa',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -554,7 +554,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>39,
                 'name'=>'Củ Hẹ',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>50000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -568,7 +568,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>40,
                 'name'=>'Rau Rút',
-                'gardenName'=>'Trang trại hữu cơ BIOPHAP farm',
+                'gardenName'=>'Rau sạch Minh Hiệp',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -582,7 +582,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>41,
                 'name'=>'Mướp',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>27500,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -596,7 +596,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>42,
                 'name'=>'Củ Riềng',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -610,7 +610,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>43,
                 'name'=>'Mía',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>1000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -624,7 +624,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>44,
                 'name'=>'Đậu Bắp',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -638,7 +638,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>45,
                 'name'=>'Tía Tô',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>50000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -652,7 +652,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>46,
                 'name'=>'Quất',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -666,7 +666,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>47,
                 'name'=>'Mít',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>30000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -680,7 +680,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>48,
                 'name'=>'Sầu Riêng',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>65000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -694,7 +694,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>49,
                 'name'=>'Chanh Vàng',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>60000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -708,7 +708,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>50,
                 'name'=>'Chanh Xanh',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -722,7 +722,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>51,
                 'name'=>'Mận',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -736,7 +736,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>52,
                 'name'=>'Anh Đào',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>100000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -750,7 +750,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>53,
                 'name'=>'Chôm Chôm',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -764,7 +764,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>54,
                 'name'=>'Dừa',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -778,7 +778,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>55,
                 'name'=>'Dưa',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>85000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -792,7 +792,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>56,
                 'name'=>'Nhãn',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>85000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -806,7 +806,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>57,
                 'name'=>'Quýt',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>27000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -820,7 +820,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>58,
                 'name'=>'Dâu Tây',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>100000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -834,7 +834,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>59,
                 'name'=>'Mơ',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>32000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -848,7 +848,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>60,
                 'name'=>'Măng Cụt',
-                'gardenName'=>'Đồng Xanh Farm',
+                'gardenName'=>'Nhà Vườn Duy Quang',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -862,7 +862,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>61,
                 'name'=>'Mãng Cầu Xiêm',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>18000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -876,7 +876,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>62,
                 'name'=>'Hồng',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>60000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -890,7 +890,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>63,
                 'name'=>'Hồng Xiêm',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>37000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -904,7 +904,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>64,
                 'name'=>'Cóc',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>25000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -918,7 +918,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>65,
                 'name'=>'Mâm Xôi Đen',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>1000000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -932,7 +932,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>66,
                 'name'=>'Mâm Xôi Đỏ',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>400000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -946,7 +946,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>67,
                 'name'=>'Mướp Đắng',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>180000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -960,7 +960,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>68,
                 'name'=>'Quả Hạnh',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>400000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -974,7 +974,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>69,
                 'name'=>'Rau Ngót',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>19000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -988,7 +988,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>70,
                 'name'=>'Mướp Rừng',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>25000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1002,7 +1002,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>71,
                 'name'=>'Vải Thiều',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>30000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1016,7 +1016,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>72,
                 'name'=>'Lê',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>100000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1030,7 +1030,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>73,
                 'name'=>'Củ Cải',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -1044,7 +1044,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>74,
                 'name'=>'Táo Mỹ',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>90000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1058,7 +1058,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>75,
                 'name'=>'Táo Việt Nam',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>35000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1072,7 +1072,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>76,
                 'name'=>'Lựu',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>349000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1086,7 +1086,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>77,
                 'name'=>'Gừng',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>60000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -1100,7 +1100,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>78,
                 'name'=>'Dưa Hấu',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>16800,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1114,7 +1114,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>79,
                 'name'=>'Xoài',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1128,7 +1128,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>80,
                 'name'=>'Thanh Long Ruột Trắng',
-                'gardenName'=>'Univers Farm Organics',
+                'gardenName'=>'Nhà Vườn Quang Huy',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1142,7 +1142,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>81,
                 'name'=>'Thanh Long Ruột Đỏ',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1156,7 +1156,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>82,
                 'name'=>'Đu Đủ',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1170,7 +1170,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>83,
                 'name'=>'Bơ Sáp',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1184,7 +1184,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>84,
                 'name'=>'Chanh Leo',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>15000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1198,7 +1198,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>85,
                 'name'=>'Roi Đỏ',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>68000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1212,7 +1212,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>86,
                 'name'=>'Ổi',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>10500,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1226,7 +1226,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>87,
                 'name'=>'Mít',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>30000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1240,7 +1240,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>88,
                 'name'=>'Ngô',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>5500,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -1254,7 +1254,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>89,
                 'name'=>'Dứa',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>29000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1268,7 +1268,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>90,
                 'name'=>'Hành Tây',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>21800,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -1282,7 +1282,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>91,
                 'name'=>'Cà Tím',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>20000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1296,7 +1296,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>92,
                 'name'=>'Kiwi Xanh',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>130000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1310,7 +1310,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>93,
                 'name'=>'Kiwi Vàng',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>200000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1324,7 +1324,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>94,
                 'name'=>'Súp Lơ Xanh',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 45000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -1338,7 +1338,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>95,
                 'name'=>'Nho Đen Không Hạt',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 199000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1352,7 +1352,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>96,
                 'name'=>'Đậu Hà Lan',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 80000,
                 'weight'=>'1 kg',
                 'category'=>1,
@@ -1366,7 +1366,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>97,
                 'name'=>'Na',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 50000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1380,7 +1380,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>98,
                 'name'=>'Cà Rốt',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 17000,
                 'weight'=>'1 kg',
                 'category'=>2,
@@ -1394,7 +1394,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>99,
                 'name'=>'Cà Chua',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=> 30000,
                 'weight'=>'1 kg',
                 'category'=>3,
@@ -1408,7 +1408,7 @@ class ProductSeeder extends Seeder
             [
                 'id'=>100,
                 'name'=>'Cà Pháo',
-                'gardenName'=>'Trang trại hữu cơ Organica',
+                'gardenName'=>'Nhà Vườn Tiến Dũng',
                 'price'=>40000,
                 'weight'=>'1 kg',
                 'category'=>3,
