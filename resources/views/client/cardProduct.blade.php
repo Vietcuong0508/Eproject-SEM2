@@ -1,4 +1,4 @@
-@section('title', 'Sản Phẩm')
+@section('title', 'Giỏ Hàng')
 @extends('client.layouts.master-1')
 @section('custom-style')
 @endsection
@@ -93,42 +93,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{--                        <div class="col-4">--}}
-                        {{--                            <div class="w3-card-4 rounded">--}}
-                        {{--                                <div class="w3-container" style="background-color: #18a514">--}}
-                        {{--                                    <h2>Order</h2>--}}
-                        {{--                                </div>--}}
-                        {{--                                <form class="w3-container" method="post" action="/shopping/order">--}}
-                        {{--                                    @csrf--}}
-                        {{--                                    <div class="m-0 mt-3">--}}
-                        {{--                                        <label>Name</label>--}}
-                        {{--                                        <input class="w3-input" type="text" name="shipName">--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <div class="m-0 mt-3">--}}
-                        {{--                                        <label>Phone</label>--}}
-                        {{--                                        <input class="w3-input" type="text" name="shipPhone">--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <div class="m-0 mt-3">--}}
-                        {{--                                        <label>Address</label>--}}
-                        {{--                                        <input class="w3-input" type="text" name="shipAddress">--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <div class="m-0 mt-3">--}}
-                        {{--                                        <label>Email</label>--}}
-                        {{--                                        <input class="w3-input" type="text" name="email">--}}
-                        {{--                                    </div>--}}
-                        {{--                                    <div class="mb-3 mt-3">--}}
-                        {{--                                        <label>Note</label>--}}
-                        {{--                                        <input class="w3-input" type="text" name="note">--}}
-
-                        {{--                                    </div>--}}
-                        {{--                                    <h3 class="">Total Price: {{$totalPrice}}</span></h3>--}}
-                        {{--                                    <div class="row ml-1">--}}
-                        {{--                                        <button class=" btn btn-success mb-3" style="padding: 8px 143px">Submit Order--}}
-                        {{--                                        </button>--}}
-                        {{--                                    </div>--}}
-                        {{--                                </form>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
                     </div>
                 </div>
             </div>

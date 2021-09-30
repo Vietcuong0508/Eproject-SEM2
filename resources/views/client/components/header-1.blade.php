@@ -27,11 +27,11 @@
 {{--            </li>--}}
             <li><a href="#">Nhà Vườn</a>
                 <ul class="header__menu__dropdown">
-                    <li><a href="/garden/name1">Organik Đà Lạt</a></li>
-                    <li><a href="/garden/name2">BIOPHAP</a></li>
-                    <li><a href="/garden/name3">Viễn Phú</a></li>
-                    <li><a href="/garden/name4">Deli Fresh</a></li>
-                    <li><a href="/garden/name5">Lion Golden</a></li>
+                    <li><a href="/garden/name1">Vườn rau, trái cây sạch bà Họa</a></li>
+                    <li><a href="/garden/name2">Rau sạch Minh Hiệp</a></li>
+                    <li><a href="/garden/name3">Nhà Vườn Duy Quang</a></li>
+                    <li><a href="/garden/name4">Nhà Vườn Quang Huy</a></li>
+                    <li><a href="/garden/name5">Nhà Vườn Tiến Dũng</a></li>
                 </ul>
             </li>
             <li><a href="/contact">Liên Hệ</a></li>
@@ -62,11 +62,11 @@
 {{--                        </li>--}}
                         <li><a href="#">Nhà Vườn</a>
                             <ul class="header__menu__dropdown">
-                                <li><a href="/garden/name1">Organik Đà Lạt</a></li>
-                                <li><a href="/garden/name2">BIOPHAP</a></li>
-                                <li><a href="/garden/name3">Viễn Phú</a></li>
-                                <li><a href="/garden/name4">Deli Fresh</a></li>
-                                <li><a href="/garden/name5">Lion Golden</a></li>
+                                <li><a href="/garden/name1">Vườn rau, trái cây sạch bà Họa</a></li>
+                                <li><a href="/garden/name2">Rau sạch Minh Hiệp</a></li>
+                                <li><a href="/garden/name3">Nhà Vườn Duy Quang</a></li>
+                                <li><a href="/garden/name4">Nhà Vườn Quang Huy</a></li>
+                                <li><a href="/garden/name5">Nhà Vườn Tiến Dũng</a></li>
                             </ul>
                         </li>
                         <li><a href="/contact">Liên Hệ</a></li>
@@ -83,7 +83,7 @@
                                 <i class="fas fa-user"></i>&ensp;{{\Illuminate\Support\Facades\Auth::user()->fullName}}
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item border-0" href="/shopping-cart"><i class="fa fa-shopping-bag">
+                                <a class="dropdown-item border-0" href="/shopping/cart"><i class="fa fa-shopping-bag">
                                         Giỏ hàng</i></a>
                                 <a class="dropdown-item border-0" href="{{route('logout')}}"><i
                                         class="fas fa-power-off ic-logout"></i> Đăng xuất</a>

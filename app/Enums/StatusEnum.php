@@ -13,7 +13,7 @@ final class StatusEnum extends Enum
 {
     const Hủy =   -1;
     const Chờ_Xác_Nhận =   1;
-    const Xác_Nhận = 2;
-    const Đang_Chuyển = 3;
+    const Đã_Xác_Nhận = 2;
+    const Đang_Giao_Hàng = 3;
     const Hoàn_Thành = 4;
 }

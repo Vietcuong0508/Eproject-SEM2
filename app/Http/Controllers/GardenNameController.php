@@ -20,7 +20,7 @@ class GardenNameController extends Controller
                 ->orWhere('nutrient', 'like', '%' . $search . '%');
 
         }
-        $gardenName = Product::query()->where('gardenName', 'like', 'Trang trại hữu cơ Organik Đà Lạt')->limit(20)->get();
+        $gardenName = Product::query()->where('gardenName', 'like', 'Vườn rau, trái cây sạch bà Họa')->limit(20)->get();
 
         if ($price == 1) {
             $queryBuilder = $queryBuilder->whereBetween('price', [0, 20000]);
@@ -64,7 +64,7 @@ class GardenNameController extends Controller
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
                 ->orWhere('nutrient', 'like', '%' . $search . '%');
         }
-        $gardenName = Product::query()->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm')->limit(21)->get();
+        $gardenName = Product::query()->where('gardenName', 'like', 'Rau sạch Minh Hiệp')->limit(21)->get();
 
         if ($price == 1) {
             $queryBuilder = $queryBuilder->whereBetween('price', [0, 20000]);
@@ -106,7 +106,7 @@ class GardenNameController extends Controller
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-        $garden = Product::query()->where('gardenName', 'like', 'Đồng Xanh Farm')->limit(21)->get();
+        $garden = Product::query()->where('gardenName', 'like', 'Nhà Vườn Duy Quang')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
@@ -152,7 +152,7 @@ class GardenNameController extends Controller
         $price = $request->get('price');
         $gardenName = $request->get('gardenName');
         $category = $request->get('category');
-        $garden = Product::query()->where('gardenName', 'like', 'Univers Farm Organics')->limit(21)->get();
+        $garden = Product::query()->where('gardenName', 'like', 'Nhà Vườn Quang Huy')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')
@@ -198,7 +198,7 @@ class GardenNameController extends Controller
         $search = $request->query('search');
         $price = $request->get('price');
         $category = $request->get('category');
-        $garden = Product::query()->where('gardenName', 'like', 'Trang trại hữu cơ Organica')->limit(21)->get();
+        $garden = Product::query()->where('gardenName', 'like', 'Nhà Vườn Tiến Dũng')->limit(21)->get();
         if ($search && strlen($search) > 0) {
             $queryBuilder = $queryBuilder->where('name', 'like', '%' . $search . '%')
                 ->orWhere('vitamin', 'like', '%' . $search . '%')

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Enums\CheckoutEnum;
 use App\Enums\Sort;
 use App\Models\Order;
+use App\Models\OrderDetail;
+use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -14,10 +16,11 @@ class OrderController extends Controller
     {
         $sort = $request->query('sort');
         $search = $request->query('search');
+        $status = $request->get('status');
         $query_builder = Order::query();
         $amount = 0;
         foreach (Order::query()->where('isCheckout',CheckoutEnum::PAID)->get() as $item){
-            $amount += $item->total_price;
+            $amount += $item->totalPrice;
         }
         if ($sort && $sort == Sort::SORT_ID_ASC) {
             $query_builder->orderBy('id', 'ASC')->get();
@@ -31,19 +34,7 @@ class OrderController extends Controller
         if ($sort && $sort == Sort::SORT_CREATED_AT_DESC) {
             $query_builder->orderBy('created_at', 'DESC')->get();
         }
-        if ($search) {
-            $query_builder->where('shipPhone','like','%'.$search.'%')
-                ->orWhere('shipName','like','%'.$search.'%')
-                ->orWhere('email','like','%'.$search.'%')
-                ->orWhere('shipAddress','like','%'.$search.'%')
-                ->orWhere('totalPrice','like','%'.$search.'%')
-            ;
-        }
 
-
-        if ($request->status){
-            $query_builder->where('status',$request->status);
-        }
         if ($request->member && $request->member == 2){
             $query_builder->where('user_id','=',null);
         }
@@ -59,30 +50,31 @@ class OrderController extends Controller
         if ($request->date_filter && $request->date_filter == '30day'){
             $query_builder->where('created_at','>',Carbon::now()->addDay(-30));
         }
-        if ($request->user_name){
-            $query_builder->where('ship_name','like','%'.$request->user_name.'%');
+
+        if ($status == 1) {
+            $query_builder = $query_builder->where('status', '=', -1);
         }
-        if ($request->ship_address){
-            $query_builder->where('ship_address','like','%'.$request->ship_address.'%');
+        if ($status == 2) {
+            $query_builder = $query_builder->where('status', '=', 1);
         }
-        if ($request->order_code){
-            $query_builder->where('order_code',$request->order_code);
+        if ($status == 3) {
+            $query_builder = $query_builder->where('status', '=', 2);
         }
-        if ($request->user_phone){
-            $query_builder->where('ship_phone','like','%'.$request->user_phone.'%');
+        if ($status == 4) {
+            $query_builder = $query_builder->where('status', '=', 3);
         }
+        if ($status == 5) {
+            $query_builder = $query_builder->where('status', '=', 4);
+        }
+
         $orders = $query_builder->orderBy('id','DESC')->paginate(10);
-        return view('admin.orders.table', [
+        return view('admin.order.list', [
             'amount'=>$amount,
             'list' => $orders,
             'key_search' => $search,
             'sort'=>$sort,
-            'status'=>$request->status,
+            'status'=>$status,
             'date_filter'=>$request->date_filter,
-            'user_name'=>$request->user_name,
-            'ship_address'=>$request->ship_address,
-            'order_code'=>$request->order_code,
-            'user_phone'=>$request->user_phone,
         ]);
     }
 
@@ -90,7 +82,9 @@ class OrderController extends Controller
     public function show($id)
     {
         $news = Order::where('id', '=', $id)->select('*')->first();
-        return view('/admin/order/order-detail', ['news' => $news]);
+        return view('/admin/order/order-detail', [
+            'news' => $news,
+        ]);
     }
 
 
