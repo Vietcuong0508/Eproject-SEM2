@@ -180,11 +180,11 @@
                                         </option>
                                         <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại hữu cơ BIOPHAP farm
                                         </option>
-                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Nông trại hữu cơ Viễn Phú
+                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Đồng Xanh Farm
                                         </option>
-                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Công ty cổ phần Deli Fresh
+                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Univers Farm Organics
                                         </option>
-                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Công Ty TNHH Lion Golden
+                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Trang trại hữu cơ Organica
                                         </option>
                                     </select>
                                 </form>

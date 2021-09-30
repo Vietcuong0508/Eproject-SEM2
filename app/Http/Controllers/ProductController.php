@@ -37,19 +37,19 @@ class ProductController extends Controller
         }
 
         if ($gardenName == 1) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại rau hữu cơ Organik Đà Lạt');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ Organik Đà Lạt');
         }
         if ($gardenName == 2) {
             $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
         }
         if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Đồng Xanh Farm');
         }
         if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Univers Farm Organics');
         }
         if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ Organica');
         }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
@@ -91,13 +91,13 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
         }
         if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Đồng Xanh Farm');
         }
         if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Univers Farm Organics');
         }
         if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ Organica');
         }
         $events = $queryBuilder->paginate(9)->appends(['search' => $search]);
         $newProduct = Product::query()->orderBy('id', 'DESC')->take(200)->get();
@@ -143,13 +143,13 @@ class ProductController extends Controller
             $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ BIOPHAP farm');
         }
         if ($gardenName == 3) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Nông trại hữu cơ Viễn Phú');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Đồng Xanh Farm');
         }
         if ($gardenName == 4) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công ty cổ phần Deli Fresh');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Univers Farm Organics');
         }
         if ($gardenName == 5) {
-            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Công Ty TNHH Lion Golden');
+            $queryBuilder = $queryBuilder->where('gardenName', 'like', 'Trang trại hữu cơ Organica');
         }
         if ($category == 1) {
             $queryBuilder = $queryBuilder->where('category', '=', 1);
