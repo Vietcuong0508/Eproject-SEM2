@@ -139,9 +139,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="hero__item__garden garden-name1" data-setbg="/libs/client/img/garden-3.jpg">
-                    <div class="hero__text garden">
+                    <div class="garden">
                         <span>RAU SẠCH</span>
-                        <h2>Trang trại <br/>rau Organik Đà Lạt</h2>
+                        <h1>Trang trại <br/>rau Organik Đà Lạt</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>
