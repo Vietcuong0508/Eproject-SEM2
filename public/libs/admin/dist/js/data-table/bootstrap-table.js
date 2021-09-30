@@ -470,7 +470,7 @@
             return sprintf('%s rows per page', pageNumber);
         },
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
-            return sprintf('Showing %s to %s of %s rows', pageFrom, pageTo, totalRows);
+            return sprintf('Hiển thị %s đến %s của %s hàng', pageFrom, pageTo, totalRows);
         },
         formatDetailPagination: function (totalRows) {
             return sprintf('Showing %s rows', totalRows);
@@ -479,7 +479,7 @@
             return 'Search';
         },
         formatNoMatches: function () {
-            return 'No matching records found';
+            return 'Không tìm thấy kết quả';
         },
         formatPaginationSwitch: function () {
             return 'Hide/Show pagination';
@@ -1175,7 +1175,7 @@
                 '<div class="pull-' + this.options.searchAlign + ' search">',
                 sprintf('<input class="form-control' +
                     sprintf(' input-%s', this.options.iconSize) +
-                    '" type="text" placeholder="%s">',
+                    '" type="text" placeholder="Tìm Kiếm">',
                     this.options.formatSearch()),
                 '</div>');
 

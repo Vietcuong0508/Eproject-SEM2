@@ -143,7 +143,7 @@
                 <span>RAU SẠCH</span>
                 <h2>Công Ty <br/> TNHH Lion Golden</h2>
                 <p>Nhận và giao hàng miễn phí có sẵn</p>
-                <a href="#" class="primary-btn">SHOP NOW</a>
+                <a href="/products" class="primary-btn">Mua Ngay</a>
             </div>
         </div>
         </div>

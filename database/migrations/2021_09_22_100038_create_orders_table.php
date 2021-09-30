@@ -32,7 +32,7 @@ class CreateOrdersTable extends Migration
             //1.Confirmed. đã xác nhận đơn hàng
             //2. Shipping. đã được vẫn chuyển
             //3. Done . đã xử lý xong
-            $table->integer('status')->default(StatusEnum::Waiting); // trạng thái là gì?: waiting , shipping, done
+            $table->integer('status')->default(StatusEnum::Chờ_Xác_Nhận); // trạng thái là gì?: waiting , shipping, done
         });
     }
 

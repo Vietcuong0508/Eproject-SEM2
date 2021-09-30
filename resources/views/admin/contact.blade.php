@@ -14,7 +14,7 @@
 @section('main-content')
     <div class="data-table-area mg-b-15">
         <div class="container-fluid">
-            <div class="row" style="margin-left: 150px">
+            <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="sparkline13-list">
                         <div class="sparkline13-hd">
@@ -32,12 +32,12 @@
                                        data-toolbar="#toolbar">
                                     <thead>
                                     <tr>
-                                        <th>Check</th>
+                                        <th class="col-1">Đánh Dấu</th>
                                         <th data-field="id">ID</th>
-                                        <th data-field="name" data-editable="true">Name</th>
+                                        <th data-field="name" data-editable="true">Tên</th>
                                         <th data-field="email" data-editable="true">Email</th>
-                                        <th data-field="task" data-editable="true">Note</th>
-                                        <th data-field="phone" data-editable="true">Status</th>
+                                        <th data-field="task" data-editable="true">Lời Nhắn</th>
+                                        <th data-field="phone" data-editable="true" class="col-2">Trạng Thái</th>
                                     </tr>
                                     </thead>
                                     <tbody>

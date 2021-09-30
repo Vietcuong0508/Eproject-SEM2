@@ -11,9 +11,9 @@ use BenSampo\Enum\Enum;
  */
 final class StatusEnum extends Enum
 {
-    const Cancel =   -1;
-    const Waiting =   1;
-    const Confirmed = 2;
-    const Shipping = 3;
-    const Done = 4;
+    const Hủy =   -1;
+    const Chờ_Xác_Nhận =   1;
+    const Xác_Nhận = 2;
+    const Đang_Chuyển = 3;
+    const Hoàn_Thành = 4;
 }

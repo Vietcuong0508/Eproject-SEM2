@@ -7,8 +7,8 @@
                         <a href="/"><img src="/libs/client/img/logo/logo-1.png"></a>
                     </div>
                     <ul>
-                        <li>Address: 8 Tôn Thất Thuyết, Mỹ Đình, Cầu Giấy, Hà Nội, Vietnam</li>
-                        <li>Phone: +84 88.888.888</li>
+                        <li>Địa Chỉ: 8 Tôn Thất Thuyết, Mỹ Đình, Cầu Giấy, Hà Nội, Việt Nam</li>
+                        <li>Số Điện Thoại: +84 88.888.888</li>
                         <li>Email: eproject@gmail.com</li>
                     </ul>
                 </div>
@@ -19,7 +19,7 @@
                     <ul>
                         <li><a href="/about-us">Về Chúng Tôi</a></li>
                         <li><a href="/about-web">Về Web Của Chúng Tôi</a></li>
-                        <li><a href="#">Mua sắm an toàn</a></li>
+                        <li><a href="#">Mua Sắm An Toàn</a></li>
                         <li><a href="/contact">Liên Hệ</a></li>
                     </ul>
                 </div>

@@ -15,8 +15,25 @@ class OrderController extends Controller
             $queryBuilder = $queryBuilder->where('shipName', 'like', '%' . $search . '%');
         }
         $events = $queryBuilder->paginate(10)->appends(['search' => $search]);
+        $price = $request->get('total_price');
+        $category = $request->get('total_price');
+        $price = $request->get('total_price');
+
+        if ($price == 1) {
+            $queryBuilder = $queryBuilder->whereBetween('total_price', [0, 20000]);
+        }
+        if ($price == 2) {
+            $queryBuilder = $queryBuilder->whereBetween('total_price', [20000, 50000]);
+        }
+        if ($price == 3) {
+            $queryBuilder = $queryBuilder->whereBetween('total_price', [50000, 100000]);
+        }
+        if ($price == 4) {
+            $queryBuilder = $queryBuilder->where('total_price', '>' ,100000);
+        }
         return view('/admin/order/list', [
             'list' => $events,
+            'price' => $price
         ]);
     }
 

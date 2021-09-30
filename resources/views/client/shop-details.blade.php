@@ -54,7 +54,7 @@
                             <div class="quantity d-inline-block mr-2">
                                 <div class="pro-qty">Số lượng:
                                     <input type="number"  min="1"
-                                           name="quantity" value="{{number_format($news->qty)}}">
+                                           name="quantity" value="1">
                                 </div>
                             </div>
                             <a href="/shopping/add?productId={{$news->id}}&productQuantity=1"" class="primary-btn">Thêm vào giỏ hàng</a>

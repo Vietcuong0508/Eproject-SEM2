@@ -150,7 +150,7 @@ class ShoppingCartController extends Controller
             $order_detail->save();
             $this->delete_cart($item->id);
         }
-        return redirect('/admin/list-order');
+        return view('/client/success');
     }
 
     public function delete_cart($id){

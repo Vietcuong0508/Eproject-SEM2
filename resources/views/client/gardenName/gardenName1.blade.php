@@ -143,7 +143,7 @@
                         <span>RAU SẠCH</span>
                         <h2>Trang trại <br/>rau Organik Đà Lạt</h2>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
-                        <a href="#" class="primary-btn">SHOP NOW</a>
+                        <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>
                 </div>
             </div>
@@ -283,7 +283,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        @foreach($garden as $obj)
+                        @foreach($gardenName as $obj)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="{{$obj->thumbnail}}">

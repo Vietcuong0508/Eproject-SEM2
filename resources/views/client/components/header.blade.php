@@ -138,12 +138,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__item set-bg" data-setbg="/libs/client/img/hero/img.png">
+                <div class="hero__item set-bg" data-setbg="/libs/client/img/hero/img_2.png">
                     <div class="hero__text">
                             <span>Rau Sạch</span>
                         <h2>Rau quả<br/>100% hữu cơ</h2>
                         <p>Nhận và giao hàng miễn phí</p>
-                        <a href="/product" class="primary-btn">Mua Ngay</a>
+                        <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>
                 </div>
             </div>
