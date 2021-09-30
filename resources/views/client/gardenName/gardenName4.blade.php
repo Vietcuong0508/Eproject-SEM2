@@ -141,7 +141,7 @@
                 <div class="hero__item__garden garden-name4" data-setbg="/libs/client/img/garden-3.jpg">
                     <div class=" garden">
                         <span>RAU SẠCH</span>
-                        <h1>Công ty<br/>cổ phần Deli Fresh</h1>
+                        <h1>Nhà Vườn<br/> Quang Huy</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>

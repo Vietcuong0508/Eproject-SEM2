@@ -20,12 +20,11 @@
 
                 </div>
                 <div class="row col-sm-12" style="margin-bottom: 200px; margin-top: 50px">
-                    <div class="col-sm-6">
-                        <a href="/products" class="primary-btn text-center" style="float: right; width: 280px">Tiếp tục mua hàng</a>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 text-center">
+                        <a href="/products" class="primary-btn text-center">Tiếp tục mua hàng</a>
                     </div>
-                    <div class="col-sm-6">
-                        <a href="" class="primary-btn text-center" style="width: 280px">Xem chi tiết đơn hàng</a>
-                    </div>
+                    <div class="col-sm-4"></div>
                 </div>
             </div>
         </div>

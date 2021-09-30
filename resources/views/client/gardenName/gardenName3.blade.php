@@ -141,7 +141,7 @@
                 <div class="hero__item__garden garden-name3" data-setbg="/libs/client/img/garden-3.jpg">
                     <div class="garden">
                         <span>RAU SẠCH</span>
-                        <h1>Nông trại <br/> hữu cơ Viễn Phú</h1>
+                        <h1>Nhà Vườn <br/> Duy Quang</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>

@@ -141,7 +141,7 @@
                 <div class="hero__item__garden garden-name2">
                     <div class="garden">
                         <span>RAU SẠCH</span>
-                        <h1>Trang trại <br/> hữu cơ BIOPHAP</h1>
+                        <h1>Rau Sạch <br/> Minh Hiệp</h1>
                         <p>Nhận và giao hàng miễn phí có sẵn</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>
                     </div>

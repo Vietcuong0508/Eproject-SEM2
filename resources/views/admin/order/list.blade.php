@@ -12,6 +12,9 @@
         td a{
             color: white!important;
         }
+        .eye {
+            color: white!important;
+        }
     </style>
 @endsection
 @section('main-content')
@@ -23,32 +26,29 @@
                         <div class="sparkline13-graph">
                             <div class="w3-panel w3-green w3-display-container">
                                 <form action="" id="filter_form">
-                                    <select class="selectpicker" id="price" name="total_price">
-                                        <option selected disabled hidden>Lọc theo giá</option>
-                                        <option value="1" {{$price && $price == 1 ? 'selected':''}}>0-20.000 VNĐ</option>
-                                        <option value="2" {{$price && $price == 2 ? 'selected':''}}>20.000-50.000 VNĐ</option>
-                                        <option value="3" {{$price && $price == 3 ? 'selected':''}}>50.000-100.000 VNĐ</option>
-                                        <option value="4" {{$price && $price == 4 ? 'selected':''}}>Lớn Hơn 100.000 VNĐ</option>
-                                    </select>
-{{--                                    <select class="selectpicker" id="category" name="category">--}}
-{{--                                        <option selected disabled hidden>Lọc danh mục</option>--}}
-{{--                                        <option value="1" {{$category && $category == 1 ? 'selected':''}}>Rau</option>--}}
-{{--                                        <option value="2" {{$category && $category == 2 ? 'selected':''}}>Củ</option>--}}
-{{--                                        <option value="3" {{$category && $category == 3 ? 'selected':''}}>Quả</option>--}}
-{{--                                    </select>--}}
-{{--                                    <select class="selectpicker" id="gardenName" name="gardenName">--}}
-{{--                                        <option selected disabled hidden>Lọc theo nhà vườn</option>--}}
-{{--                                        <option value="1" {{$gardenName && $gardenName == 1 ? 'selected':''}}>Trang trại rau hữu cơ Organik Đà Lạt--}}
-{{--                                        </option>--}}
-{{--                                        <option value="2" {{$gardenName && $gardenName == 2 ? 'selected':''}}>Trang trại hữu cơ BIOPHAP farm--}}
-{{--                                        </option>--}}
-{{--                                        <option value="3" {{$gardenName && $gardenName == 3 ? 'selected':''}}>Đồng Xanh Farm--}}
-{{--                                        </option>--}}
-{{--                                        <option value="4" {{$gardenName && $gardenName == 4 ? 'selected':''}}>Univers Farm Organics--}}
-{{--                                        </option>--}}
-{{--                                        <option value="5" {{$gardenName && $gardenName == 5 ? 'selected':''}}>Trang trại hữu cơ Organica--}}
-{{--                                        </option>--}}
-{{--                                    </select>--}}
+                                    <div class="form-group col-sm-2">
+                                        <select name="sort" id="sort" class="form-control sorted">
+                                            <option value="" hidden>Sắp xếp</option>
+                                            <option
+                                                {{$sort ==  \App\Enums\Sort::SORT_CREATED_AT_ASC ? 'selected' : ''}} value="{{\App\Enums\Sort::SORT_CREATED_AT_ASC}}">
+                                                Cũ nhất trước
+                                            </option>
+                                            <option
+                                                {{$sort ==  \App\Enums\Sort::SORT_CREATED_AT_DESC ? 'selected' : ''}} value="{{\App\Enums\Sort::SORT_CREATED_AT_DESC}}">
+                                                Mới nhất trước
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-2">
+                                        <select id="status" name="status" class="form-control sorted">
+                                            <option selected disabled hidden>Lọc Trạng Thái</option>
+                                            <option value="1" {{$status && $status == 1 ? 'selected':''}}>Hủy</option>
+                                            <option value="2" {{$status && $status == 2 ? 'selected':''}}>Chờ Xác Nhận</option>
+                                            <option value="3" {{$status && $status == 3 ? 'selected':''}}>Đã Xác Nhận</option>
+                                            <option value="3" {{$status && $status == 4 ? 'selected':''}}>Đang Chuyển</option>
+                                            <option value="3" {{$status && $status == 5 ? 'selected':''}}>Hoàn Thành</option>
+                                        </select>
+                                    </div>
                                 </form>
                             </div>
                             <div class="datatable-dashv1-list custom-datatable-overright">
@@ -82,7 +82,8 @@
                                             <td>{{number_format($obj->total_price)}} VND</td>
                                             <td>{{$obj->created_at}}</td>
                                             <td>{{\App\Enums\StatusEnum::getDescription($obj->status)}}</td>
-                                            <td class="datatable-ct"><i class="glyphicon glyphicon-eye-open"></i>
+                                            <td class="datatable-ct">
+                                                <a href="/order/{{$obj->id}}"><i class="glyphicon glyphicon-eye-open"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -114,8 +115,8 @@
                                                 <option hidden>Thay Đổi Trạng Thái</option>
                                                 <option value="{{\App\Enums\StatusEnum::Hủy}}">Hủy</option>
                                                 <option value="{{\App\Enums\StatusEnum::Chờ_Xác_Nhận}}">Chờ Xác Nhận</option>
-                                                <option value="{{\App\Enums\StatusEnum::Xác_Nhận}}">Xác Nhận</option>
-                                                <option value="{{\App\Enums\StatusEnum::Đang_Chuyển}}">Đang Chuyển</option>
+                                                <option value="{{\App\Enums\StatusEnum::Đã_Xác_Nhận}}">Đã Xác Nhận</option>
+                                                <option value="{{\App\Enums\StatusEnum::Đang_Giao_Hàng}}">Đang Giao Hàng</option>
                                                 <option value="{{\App\Enums\StatusEnum::Hoàn_Thành}}">Hoàn Thành</option>
                                             </select>
                                             <button class="btn btn-primary btn_submit" style="width: 120px">Xác Nhận
@@ -171,13 +172,10 @@
         })
 
         document.addEventListener('DOMContentLoaded', function () {
-            $('#price').change(function () {
+            $('#status').change(function () {
                 $('#filter_form').submit()
             })
-            $('#gardenName').change(function () {
-                $('#filter_form').submit()
-            })
-            $('#category').change(function () {
+            $('#sort').change(function () {
                 $('#filter_form').submit()
             })
         })
