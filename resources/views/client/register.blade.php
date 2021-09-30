@@ -102,14 +102,6 @@
                                             @enderror
                                         </div>
 
-                                        <div class="form-outline mb-4" style="display: none">
-                                            <label class="form-label">Role</label>
-                                            <select name="permission" class="form-control border-success">
-                                                <option value="user">user</option>
-                                                <option value="admin">admin</option>
-                                            </select>
-                                        </div>
-
 
                                         <div class="row justify-content-center px-3">
                                             <button type="submit" class="btn-block btn-submit">Submit form</button>

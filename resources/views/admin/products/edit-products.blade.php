@@ -12,7 +12,7 @@
                 <div class="col">
                     <div class="card card-registration my-4">
                         <div class="col-xl-12">
-                            <form action="/update-products/{{$edit->id}}" method="post">
+                            <form action="{{route('update-product', $edit->id )}}" method="post">
                                 @method('put')
                                 @csrf
                                 <div class="card-body p-md-5 text-black">

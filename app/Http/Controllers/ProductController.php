@@ -189,7 +189,7 @@ class ProductController extends Controller
         $product->fill($request->all());
         $request->validated();
         $product->save();
-        return redirect('/list-products')->with('store','Thêm mới sản phẩm thành công');
+        return redirect()->route('list-product')->with('store','Thêm mới sản phẩm thành công');
     }
 
     public function edit($id)
@@ -206,7 +206,7 @@ class ProductController extends Controller
         $detail->update($request->all());
         $request->validated();
         $detail->save();
-        return redirect('list-products')->with('update','Update sản phẩm thành công');
+        return redirect()->route('list-product')->with('update','Update sản phẩm thành công');
     }
 
 
@@ -214,6 +214,6 @@ class ProductController extends Controller
     {
         $detail = Product::find($id);
         $detail->delete();
-        return redirect('list-products')->with('destroy','Xóa sản phẩm thành công');;
+        return redirect()->route('list-product')->with('destroy','Xóa sản phẩm thành công');;
     }
 }

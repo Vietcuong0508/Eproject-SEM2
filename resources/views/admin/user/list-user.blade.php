@@ -58,11 +58,15 @@
                     <td>{{$users->phone}}</td>
                     <td>{{$users->email}}</td>
                     <td>{{$users->address}}</td>
-                    <td>{{$users->permission}}</td>
+                    @if($users->role == 1)
+                        <td>User</td>
+                    @else
+                        <td>Admin</td>
+                    @endif
                     <td class="row hidden-phone">
-                        <a href="/edit-user/{{$users->id}}" style="margin-right: 5px">
+                        <a href="{{route('edit-user', $users->id)}}" style="margin-right: 5px">
                             <button class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</button></a>
-                        <form action="/destroy-user/{{$users->id}}" method="post" style="float: left">
+                        <form action="{{route('destroy-user', $users->id)}}" method="post" style="float: left">
                             @csrf
                             @method('delete')
                             <button class="btn px-3  btn-danger" href="#" title="Delete"

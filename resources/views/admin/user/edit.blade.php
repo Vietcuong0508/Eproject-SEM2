@@ -11,7 +11,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col">
                     <div class="card card-registration my-4">
-                        <form action="/update-user/{{$obj->id}}" method="post">
+                        <form action="{{route('update-user', $obj->id)}}" method="post">
                             @method('put')
                             @csrf
                             <div class="card-body p-md-5 text-black">
@@ -94,10 +94,9 @@
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
                                             <label class="form-label">Quyền Hạn</label>
-                                            <select name="permission" class="form-control border-success">
-                                                @foreach(App\Enums\Role::getValues() as $type)
-                                                    <option {{$obj->type == $type ? 'selected' : ''}} value="{{$type}}">{{App\Enums\Role::getDescription($type)}}</option>
-                                                @endforeach
+                                            <select name="role" class="form-control border-success">
+                                                <option value="{{\App\Enums\Role::ADMIN}}">Admin</option>
+                                                <option value="{{\App\Enums\Role::USER}}">User</option>
                                             </select>
                                         </div>
                                     </div>

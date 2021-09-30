@@ -105,10 +105,10 @@
                     <td>{{$product->weight}}</td>
                     <td>{{number_format($product->price)}} VND</td>
                     <td class="row hidden-phone">
-                        <a href="/edit-products/{{$product->id}}" style="margin-right: 5px">
+                        <a href="{{route('edit-product', $product->id)}}" style="margin-right: 5px">
                             <button class="btn btn-primary"><i class="fas fa-edit"></i> Sửa</button>
                         </a>
-                        <form action="/destroy-products/{{$product->id}}" method="post">
+                        <form action="{{route('destroy-product', $product->id)}}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn px-3  btn-danger" href="#" title="Delete"

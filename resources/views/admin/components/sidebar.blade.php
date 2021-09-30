@@ -20,7 +20,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Bảng Điều Khiển</p>
                             </a>
@@ -34,13 +34,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/create-products" class="nav-link">
+                            <a href="{{route('create-products')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm Mới Sản Phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/list-products" class="nav-link">
+                            <a href="{{route('list-product')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh Sách Sản Phẩm</p>
                             </a>
@@ -54,13 +54,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/create-user" class="nav-link">
+                            <a href="{{route('create-user')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm Mới Tài Khoản</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/user" class="nav-link">
+                            <a href="{{route('user')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh Sách Tài Khoản</p>
                             </a>
@@ -88,7 +88,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin/contact" class="nav-link">
+                            <a href="{{route('contact')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh Sách Lời Nhắn</p>
                             </a>

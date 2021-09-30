@@ -35,6 +35,7 @@ class AdminController extends Controller
     {
         $user = new User();
         $request->validated();
+
         $user->fill($request->all());
         $user->password = Hash::make($request['password']);
         $user->save();
@@ -69,7 +70,7 @@ class AdminController extends Controller
         $user->fill($request->all());
         $user->password = Hash::make($request['password']);
         $user->save();
-        return redirect('/user')->with('storeAdmin','Thêm mới tài khoản thành công');
+        return redirect()->route('user')->with('storeAdmin','Thêm mới tài khoản thành công');
     }
 
     public function update(FormUserRequest $request, $id)
@@ -81,7 +82,7 @@ class AdminController extends Controller
         $request->validated();
         $obj->update($request->all());
         $obj->save();
-        return redirect('/user')->with('update','Update tài khoản thành công');
+        return redirect()->route('user')->with('update','Update tài khoản thành công');
     }
 
     public function edit($id)
@@ -101,6 +102,6 @@ class AdminController extends Controller
             return view('error.404');
         }
         $obj->delete();
-        return redirect('/user')->with('destroy','Xóa tài khoản thành công');;
+        return redirect()->route('user')->with('destroy','Xóa tài khoản thành công');
     }
 }
