@@ -71,7 +71,7 @@
                                             </ul>
                                         @endif
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6" style="margin-top: 10px">
                                         <div style="position: absolute;bottom: 20px">
                                         <span style="margin-right: 30px">Đánh dấu tất cả <input id="check_all" type="checkbox"
                                                                                           style="transform: translateY(2px)"></span>

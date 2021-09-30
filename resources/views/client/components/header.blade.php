@@ -20,12 +20,12 @@
             <li><a href="/">Trang Chủ</a></li>
             <li><a href="/products">Sản Phẩm</a></li>
             <li><a href="/shopping-cart">Giỏ Hàng</a></li>
-{{--            <li><a href="#">Pages</a>--}}
-{{--                <ul class="header__menu__dropdown">--}}
-{{--                    <li><a href="/shopping-cart">Giỏ Hàng</a></li>--}}
-{{--                    <li><a href="/checkout">Thanh Toán</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+            {{--            <li><a href="#">Pages</a>--}}
+            {{--                <ul class="header__menu__dropdown">--}}
+            {{--                    <li><a href="/shopping-cart">Giỏ Hàng</a></li>--}}
+            {{--                    <li><a href="/checkout">Thanh Toán</a></li>--}}
+            {{--                </ul>--}}
+            {{--            </li>--}}
             <li><a href="#">Nhà Vườn</a>
                 <ul class="header__menu__dropdown">
                     <li><a href="/garden/name1">Vườn rau, trái cây sạch bà Họa</a></li>
@@ -55,12 +55,6 @@
                         <li><a href="/">Trang Chủ</a></li>
                         <li><a href="/products">Sản Phẩm</a></li>
                         <li><a href="/shopping/cart">Giỏ Hàng</a></li>
-
-{{--                        <li><a href="#">Pages</a>--}}
-{{--                            <ul class="header__menu__dropdown">--}}
-{{--                                <li><a href="/checkout">Thanh Toán</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </li>--}}
                         <li><a href="#">Nhà Vườn</a>
                             <ul class="header__menu__dropdown">
                                 <li><a href="/garden/name1">Vườn rau, trái cây sạch bà Họa</a></li>
@@ -84,42 +78,30 @@
                                 <i class="fas fa-user"></i>&ensp;{{\Illuminate\Support\Facades\Auth::user()->fullName}}
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item border-0" href="/shopping/cart"><i class="fa fa-shopping-bag">
+                                <a class="dropdown-item border-0" href="/shopping/cart"><i
+                                        class="fa fa-shopping-bag">
                                         Giỏ hàng</i></a>
                                 <a class="dropdown-item border-0" href="{{route('logout')}}"><i
                                         class="fas fa-power-off ic-logout"></i> Đăng xuất</a>
                             </div>
                             @else
-                                <ul>
-                                    <li><a href="{{route('login')}}"><i class="fa fa-user">&ensp;Đăng Nhập</i></a></li>
-                                </ul>
-                            @endif
+                                <div class="header__cart__price>
+                                        <a href="{{route('login')}}"><i class="fa fa-user"></i> Đăng Nhập</a>
                         </div>
+                    @endif
                 </div>
             </div>
         </div>
-        <div class="humberger__open">
-            <i class="fa fa-bars"></i>
-        </div>
+    </div>
+    <div class="humberger__open">
+        <i class="fa fa-bars"></i>
+    </div>
     </div>
 </header>
 
 <section class="hero">
     <div class="container">
         <div class="row">
-{{--            <div class="col-lg-3">--}}
-{{--                <div class="hero__categories">--}}
-{{--                    <div class="hero__categories__all">--}}
-{{--                        <i class="fa fa-bars"></i>--}}
-{{--                        <span>Toàn Bộ Sản Phẩm</span>--}}
-{{--                    </div>--}}
-{{--                    <ul>--}}
-{{--                        <li><a href="#">Rau</a></li>--}}
-{{--                        <li><a href="#">Củ</a></li>--}}
-{{--                        <li><a href="#">Quả</a></li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
             <div class="col-lg-12">
                 <div class="hero__search">
                     <div class="hero__search__form">
@@ -140,7 +122,7 @@
                 </div>
                 <div class="hero__item set-bg" data-setbg="/libs/client/img/hero/img_2.png">
                     <div class="hero__text">
-                            <span>Rau Sạch</span>
+                        <span>Rau Sạch</span>
                         <h2>Rau quả<br/>100% hữu cơ</h2>
                         <p>Nhận và giao hàng miễn phí</p>
                         <a href="/products" class="primary-btn">Mua Ngay</a>

@@ -1,4 +1,4 @@
-@section('title', 'Product')
+@section('title', 'Thêm Mới Sản Phẩm')
 @extends('admin.layouts.master')
 @section('custom-style')
     <style>
@@ -15,7 +15,7 @@
                             <form action="{{route('create-products')}}" method="post">
                                 @csrf
                                 <div class="card-body p-md-5 text-black">
-                                    <h3 class="mb-3 text-uppercase">Thêm Mới Sản Phẩm</h3>
+                                    <h3 class="mb-3 text-uppercase text-center">Thêm Mới Sản Phẩm</h3>
                                     @if ($errors->any())
                                         <div class="alert alert-danger">
                                             <ul>

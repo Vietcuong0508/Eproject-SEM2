@@ -6168,7 +6168,11 @@ ul, ol {
     }
 
     .hero__search__form {
-        width: 485px
+        width: 100%;
+    }
+
+    .hero__search__phone {
+        text-align: center!important;
     }
 
     .categories__slider.owl-carousel .owl-nav button {
@@ -6378,7 +6382,8 @@ ul, ol {
 
     .header__cart {
         text-align: center;
-        padding: 10px 0 24px
+        padding: 10px 0 24px;
+        display: none!important;
     }
 
     .over_hid {
@@ -6396,7 +6401,7 @@ ul, ol {
     }
 
     .hero__search__form {
-        width: 100%
+        width: 100%;
     }
 
     .hero__search__form form input {
@@ -6581,6 +6586,10 @@ ul, ol {
         position: absolute;
         top: 0;
         right: -12px
+    }
+
+    .header__cart {
+        display: none;
     }
 
     .humberger__menu__cart .header__cart__price {

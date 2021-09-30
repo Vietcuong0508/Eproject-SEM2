@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 'email' => 'tranvietcuong@gmail.com',
                 'phone' => '098968656',
                 'address' => 'Thai Binh',
-                'username' => 'Tran Viet Cuong',
+                'username' => 'Cuong',
                 'password' => Hash::make('123456'),
                 'role' => Role::ADMIN
             ],

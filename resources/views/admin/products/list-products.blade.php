@@ -1,4 +1,4 @@
-@section('title', 'Product')
+@section('title', 'Danh Sách Sản Phẩm')
 @extends('admin.layouts.master')
 @section('custom-style')
 

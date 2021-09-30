@@ -7,23 +7,6 @@
 
 @section('main-content')
 
-{{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-lg-12 text-center">--}}
-{{--                    <div class="breadcrumb__text">--}}
-{{--                        <h3>Liên Hệ Chúng Tôi</h3>--}}
-{{--                        <div class="breadcrumb__option">--}}
-{{--                            <a href="./">Trang Chủ</a>--}}
-{{--                            <span>Liên Hệ Chúng Tôi</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-
-
     <section class="contact spad">
         <div class="container">
             <div class="row">
@@ -61,16 +44,6 @@
     </section>
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0969666091723!2d105.78049781476332!3d21.02880578599839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd0c66f05%3A0xea31563511af2e54!2zOCBUw7RuIFRo4bqldCBUaHV54bq_dCwgTeG7uSDEkMOsbmgsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1632295666401!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-{{--        <div class="map-inside">--}}
-{{--            <i class="icon_pin"></i>--}}
-{{--            <div class="inside-widget">--}}
-{{--                <h4>New York</h4>--}}
-{{--                <ul>--}}
-{{--                    <li>Phone: +12-345-6789</li>--}}
-{{--                    <li>Add: 16 Creek Ave. Farmingdale, NY</li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
     </div>
     <div class="contact-form spad">
         <div class="container">

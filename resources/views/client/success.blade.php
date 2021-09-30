@@ -14,7 +14,6 @@
                     <img src="libs/client/img/img.png" width="200px">
                     <h2>Thành Công!</h2>
                     <h3>Yêu cầu của bạn đã được xử lý</h3>
-                    <h5>Bạn sẽ sớm nhận được một email xác nhận</h5>
                 </div>
                 <div class="row">
 

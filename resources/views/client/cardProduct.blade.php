@@ -4,21 +4,6 @@
 @endsection
 
 @section('main-content')
-    {{--    <section class="breadcrumb-section set-bg" data-setbg="/libs/client/img/banner/img.png">--}}
-    {{--        <div class="container">--}}
-    {{--            <div class="row">--}}
-    {{--                <div class="col-lg-12 text-center">--}}
-    {{--                    <div class="breadcrumb__text">--}}
-    {{--                        <h2>Giỏ hàng</h2>--}}
-    {{--                        <div class="breadcrumb__option">--}}
-    {{--                            <a href="/">Trang Chủ</a>--}}
-    {{--                            <span>Giỏ Hàng</span>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
     <section class=" pb-5">
         <div class="container-fluid">
             <div class="row">
@@ -143,24 +128,12 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-{{--                                    <dl class="dlist-align">--}}
-{{--                                        <dt>Số Lượng Sản Phẩm :</dt>--}}
-{{--                                        <dd class="text-right text-dark b ml-3">--}}
-{{--                                            <strong>{{$products->quantity}}</strong>--}}
-{{--                                        </dd>--}}
-{{--                                    </dl>--}}
-                                    {{--                            <dl class="dlist-align">--}}
-                                    {{--                                <dt>Tax:</dt>--}}
-                                    {{--                                <dd class="text-right text-dark b ml-3">--}}
-                                    {{--                                    <strong> {{\Gloudemans\Shoppingcart\Facades\Cart::tax()}}</strong></dd>--}}
-                                    {{--                            </dl>--}}
                                     <dl class="dlist-align">
                                         <dt>Tổng :</dt>
                                         <dd class="text-right text-dark b ml-3"><strong>{{number_format($totalPrice)}} VND</strong>
                                         </dd>
                                     </dl>
                                     <hr>
-                                    {{--                                        <div id="paypal-button"></div>--}}
                                     <button class="btn btn-out btn-primary btn-square btn-main">Thực Hiện
                                         Thanh Toán
                                     </button>
