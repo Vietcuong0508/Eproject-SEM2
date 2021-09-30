@@ -111,6 +111,9 @@
                                     <div class="checkout__input">
                                         <p>Họ Và Tên<span>*</span></p>
                                         <input type="text" name="shipName">
+                                        @error('shipName')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -118,6 +121,9 @@
                                         <p>Địa Chỉ<span>*</span></p>
                                         <input type="text" placeholder="" class="checkout__input__add"
                                                name="shipAddress">
+                                        @error('shipAddress')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -126,12 +132,18 @@
                                     <div class="checkout__input">
                                         <p>Số Điện Thoại<span>*</span></p>
                                         <input type="text" name="shipPhone">
+                                        @error('shipPhone')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
                                         <input type="text" name="email">
+                                        @error('email')
+                                        <div class="text-danger">* {{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +173,7 @@
                                     </dl>
                                     <hr>
                                     {{--                                        <div id="paypal-button"></div>--}}
-                                    <button class="btn btn-out btn-primary btn-square btn-main">Thực Hiện
+                                    <button type="submit" class="btn btn-out btn-primary btn-square btn-main">Thực Hiện
                                         Thanh Toán
                                     </button>
                                     <a href="/products"

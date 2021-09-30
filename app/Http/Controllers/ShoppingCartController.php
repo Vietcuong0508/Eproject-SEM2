@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Product;
@@ -127,10 +128,10 @@ class ShoppingCartController extends Controller
     }
 
 
-    public function create_payment(Request $request)
+    public function create_payment(OrderRequest $request)
     {
         $shopping_cart = Session::get('shoppingCart');
-
+        $request->validated();
         $order = new Order();
         $order->fill($request->all());
         $amount = 0;

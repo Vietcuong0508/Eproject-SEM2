@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -22,10 +23,11 @@ class ContactController extends Controller
         return view('/client/contact');
     }
 
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         $form = new Contact();
         $form->fill($request->all());
+        $request->validated();
         $form->save();
         return redirect()->route('contact');
     }

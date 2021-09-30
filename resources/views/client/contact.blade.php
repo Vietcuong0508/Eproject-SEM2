@@ -84,14 +84,24 @@
             <form action="/contact" method="post">
                 @csrf
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 mb-5">
                         <input type="text" placeholder="Tên Của Bạn" name="name">
+                        @error('name')
+                        <div class="text-danger">* {{ $message }}</div>
+                        @enderror
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-6 col-md-6 mb-5">
                         <input type="text" placeholder="Email Của Bạn" name="email">
+                        @error('email')
+                        <div class="text-danger">* {{ $message }}</div>
+                        @enderror
+
                     </div>
                     <div class="col-lg-12 text-center">
                         <textarea placeholder="Lời Nhắn Của Bạn" name="note"></textarea>
+                        @error('note')
+                        <div class="text-danger">* {{ $message }}</div>
+                        @enderror
                         <button type="submit" class="btn btn-submit">Gừi Lời Nhắn</button>
                     </div>
                 </div>
