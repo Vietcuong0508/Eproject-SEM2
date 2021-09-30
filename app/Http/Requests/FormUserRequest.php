@@ -24,7 +24,7 @@ class FormUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'fullName' => ['required', 'min:5', 'max:50'],
+            'fullName' => ['required', 'min:5'],
             'phone' => ['numeric', 'required', 'min:9'],
             'email' => ['required', 'min:5'],
             'address' => ['required',],
@@ -44,10 +44,10 @@ class FormUserRequest extends FormRequest
             'password.required' => 'Vui lòng nhập mật khẩu',
             'email.min' => 'Email tối thiểu là 5 ký tự',
             'username.min' => 'Tài khoản tối thiểu là 5 ký tự',
-            'password.min' => 'Mật khẩu tối thiểu là 5 ký tự',
-            'fullName' => 'Họ là tên tối thiểu là 5 ký tự',
-            'phone.numeric' => 'Sô điện thoại phải là số',
-            'phone.min' => 'Sô điện thoại tối thiểu là 9 số',
+            'password.min' => 'Mật khẩu quá yếu',
+            'fullName.min' => 'Họ là tên tối thiểu là 5 ký tự',
+            'phone.numeric' => 'Số điện thoại phải là số',
+            'phone.min' => 'Số điện thoại tối thiểu là 9 số',
 
 
         ];

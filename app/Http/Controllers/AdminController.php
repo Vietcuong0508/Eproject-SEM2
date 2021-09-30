@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Enums\Role;
+use App\Http\Requests\FormLoginRequest;
 use App\Http\Requests\FormUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -35,7 +37,7 @@ class AdminController extends Controller
     {
         $user = new User();
         $request->validated();
-
+        $user->role = Role::USER;
         $user->fill($request->all());
         $user->password = Hash::make($request['password']);
         $user->save();
@@ -43,7 +45,8 @@ class AdminController extends Controller
             ->with('success', 'Đăng kí thành công');
     }
 
-    public function postLogin(Request $request) {
+    public function postLogin(FormLoginRequest $request) {
+        $request->validated();
         $arr = [
             'username' => $request->username,
             'password' => $request->password
