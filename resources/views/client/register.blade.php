@@ -20,7 +20,7 @@
 
                             <div class="col-xl-6">
 
-                                <form action="{{ route('postRegister') }}" method="post">
+                                <form action="{{ route('post-register') }}" method="post">
                                     @csrf
                                     <div class="card-body p-md-5 text-black">
                                         <h3 class="mb-3 text-uppercase text-center">Đăng Ký</h3>

@@ -58,8 +58,7 @@
                                         <div class="row justify-content-center my-2"> <a href="#" class="text-muted">Quên Mật Khẩu?</a> </div>
                                         <div class="bottom text-center mb-5">
                                             <p href="/home/register" class="sm-text mx-auto mb-3">Bạn Chưa Có Tài Khoản?
-                                                <a href="/register" class="btn btn-success ml-2 btn-register">Tạo Mới
-                                                </a>
+                                                <a href="/register" class="btn btn-success ml-2 btn-register">Tạo Mới</a>
                                             </p>
                                         </div>
                                     </div>

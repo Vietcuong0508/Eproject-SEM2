@@ -36,7 +36,7 @@ Route::get('/', [ProductController::class, 'home'])->name('index');
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/register', [AdminController::class, 'getRegister'])->name('register');
-Route::post('/register', [AdminController::class, 'postRegister'])->name('postRegister');
+Route::post('/register', [AdminController::class, 'postRegister'])->name('post-register');
 Route::get('/login', [AdminController::class, 'getLogin']);
 Route::post('/login', [AdminController::class, 'postLogin'])->name('login');
 Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
